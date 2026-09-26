@@ -1,0 +1,154 @@
+// Modelo de banco para produção (PostgreSQL). Hoje o projeto usa um repositório
+// em memória (src/services/leads/leadRepository.ts). Para ativar:
+//   npm i prisma @prisma/client && npx prisma migrate dev
+// e crie PrismaRepository implementando a interface Repository.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum LeadStatus {
+  NOVO
+  IA_ATENDENDO
+  QUALIFICADO
+  AGUARDANDO_HUMANO
+  EM_NEGOCIACAO
+  CONVERTIDO
+  PERDIDO
+}
+
+enum Interesse {
+  BAIXO
+  MEDIO
+  ALTO
+}
+
+enum Origem {
+  SITE
+  WHATSAPP
+  INSTAGRAM
+  FACEBOOK
+  GOOGLE
+  OUTRO
+}
+
+enum ModoConversa {
+  IA
+  HUMANO
+}
+
+enum AutorMensagem {
+  CLIENTE
+  IA
+  ATENDENTE
+  SISTEMA
+}
+
+/// Pessoa (um cliente pode gerar vários leads ao longo do tempo)
+model Cliente {
+  id        String   @id @default(cuid())
+  nome      String
+  whatsapp  String   @unique
+  cidade    String?
+  criadoEm  DateTime @default(now())
+  leads     Lead[]
+}
+
+model Lead {
+  id            String       @id @default(cuid())
+  cliente       Cliente      @relation(fields: [clienteId], references: [id])
+  clienteId     String
+  tipoVeiculo   String?      // CARRO | MOTO
+  veiculo       String?      // modelo ou categoria de interesse
+  credito       Int?
+  plano         String?      // "100" | "70"
+  parcela       Decimal?     @db.Decimal(10, 2)
+  faixaParcela  Decimal?     @db.Decimal(10, 2)
+  possuiVeiculo Boolean?
+  objetivo      String?      // TROCAR | COMPRAR_NOVA
+  querVendedor  Boolean?
+  interesse     Interesse    @default(BAIXO)
+  origem        Origem       @default(SITE)
+  status        LeadStatus   @default(NOVO)
+  utm           Json?
+  atendente     Atendente?   @relation(fields: [atendenteId], references: [id])
+  atendenteId   String?
+  simulacoes    Simulacao[]
+  conversas     Conversa[]
+  historico     HistoricoStatus[]
+  criadoEm      DateTime     @default(now())
+  atualizadoEm  DateTime     @updatedAt
+
+  @@index([status])
+  @@index([criadoEm])
+}
+
+model Simulacao {
+  id        String   @id @default(cuid())
+  lead      Lead     @relation(fields: [leadId], references: [id])
+  leadId    String
+  credito   Int
+  plano     String
+  parcela   Decimal  @db.Decimal(10, 2)
+  criadoEm  DateTime @default(now())
+}
+
+model Conversa {
+  id             String       @id @default(cuid())
+  lead           Lead         @relation(fields: [leadId], references: [id])
+  leadId         String
+  canal          String       @default("WHATSAPP")
+  modo           ModoConversa @default(IA)
+  dados          Json         // DadosQualificacao coletados pela IA
+  ultimaPergunta String?
+  mensagens      Mensagem[]
+  criadoEm       DateTime     @default(now())
+  atualizadoEm   DateTime     @updatedAt
+}
+
+model Mensagem {
+  id         String        @id @default(cuid())
+  conversa   Conversa      @relation(fields: [conversaId], references: [id])
+  conversaId String
+  autor      AutorMensagem
+  texto      String
+  criadoEm   DateTime      @default(now())
+
+  @@index([conversaId, criadoEm])
+}
+
+model Atendente {
+  id       String  @id @default(cuid())
+  nome     String
+  whatsapp String  @unique
+  ativo    Boolean @default(true)
+  leads    Lead[]
+}
+
+model HistoricoStatus {
+  id         String      @id @default(cuid())
+  lead       Lead        @relation(fields: [leadId], references: [id])
+  leadId     String
+  de         LeadStatus?
+  para       LeadStatus
+  autor      String      // SISTEMA | IA | ATENDENTE
+  observacao String?
+  criadoEm   DateTime    @default(now())
+}
+
+/// Tabela do consórcio no banco (opcional). Permite o admin editar sem deploy.
+model TabelaConsorcio {
+  id        String   @id @default(cuid())
+  credito   Int
+  plano     String
+  parcela   Decimal  @db.Decimal(10, 2)
+  ativo     Boolean  @default(true)
+  atualizadoEm DateTime @updatedAt
+
+  @@unique([credito, plano])
+}

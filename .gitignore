@@ -1,0 +1,9 @@
+node_modules
+# fotos soltas que não entram no site
+public/vitrine/
+.next
+.env*.local
+.env
+out
+*.tsbuildinfo
+next-env.d.ts

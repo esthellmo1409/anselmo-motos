@@ -1,0 +1,40 @@
+---
+description: Contexto e regras do projeto Anselmo Motos (consórcio de carros e motos)
+globs:
+alwaysApply: true
+---
+
+# Projeto
+Site da Anselmo Motos (Bacabal-MA): consórcio Canopus de carros e motos (inclui motos Honda).
+Objetivo único: gerar leads. Funil: anúncio → site → simulador → formulário → WhatsApp → IA → qualificação → vendedor humano.
+Stack: Next.js 15 (App Router), React 19, TypeScript strict, Tailwind 3.
+
+# Regras que não podem ser quebradas
+- NUNCA inventar, corrigir ou interpolar valores de consórcio. Toda parcela vem de `src/data/consorcioData.ts`, exatamente como está.
+- NUNCA prometer contemplação rápida/garantida, taxas, prazos ou condições que não estejam nos dados. Quando precisar, usar: "Consulte as condições vigentes do grupo."
+- NUNCA inventar preço de carro ou moto. `preco` é opcional em `src/data/veiculos.ts`.
+- Números mostrados pela IA saem do código (tabela), nunca do modelo de linguagem.
+- Chaves de API só no servidor, via variáveis de ambiente. Nada de chave no frontend.
+- Textos em português do Brasil, tom natural e direto, sem emojis.
+
+# Onde fica cada coisa
+- Dados da loja (WhatsApp, endereço, horário, Instagram): `src/config/site.ts`
+- Tabela do consórcio e planos: `src/data/consorcioData.ts`
+- Carros e motos dos cards: `src/data/veiculos.ts` (`tipo: 'CARRO' | 'MOTO'`)
+- FAQ (site e IA usam o mesmo): `src/data/faq.ts`
+- Mensagem do WhatsApp: `src/lib/whatsapp.ts`
+- AI Service: `src/services/ai/aiService.ts`; perguntas e regras de transferência: `src/services/ai/qualification.ts`; prompt: `src/services/ai/prompts.ts`; chamada ao modelo: `src/services/ai/llmClient.ts`
+- Persistência: interface `Repository` em `src/services/leads/leadRepository.ts` (hoje em memória). Banco futuro: `prisma/schema.prisma`
+- WhatsApp: `src/services/whatsapp/whatsappProvider.ts` + webhook em `src/app/api/whatsapp/webhook/route.ts`
+- Painel: `src/app/admin/page.tsx` (senha via middleware)
+
+# Design
+- Mobile first. Cores: navy #0A1E4A / #050F2B, azul elétrico #1F6BFF, ouro #FFC21A, branco, preto.
+- Fonte Archivo; títulos em caixa alta com `font-stretch` largo (classes `.titulo-largo` e `.titulo-secao`).
+- Elemento assinatura: o cartão "Carta de crédito" no simulador. Não transformar a página em grade genérica de cards.
+- Animações discretas; respeitar `prefers-reduced-motion`.
+
+# Ao alterar código
+- Rodar `npm run test:core` depois de mexer em tabela, IA, qualificação ou mensagem.
+- Rodar `npm run build` antes de dar a tarefa como pronta.
+- Manter componentes pequenos e dados fora do layout.
