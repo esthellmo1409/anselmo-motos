@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { useRef, useState } from 'react';
+import { SLIDES_HERO } from '@/data/heroSlides';
 import { nomeModelo, veiculosAtivos } from '@/data/veiculos';
 import { formatBRL } from '@/lib/format';
 import { useSimulador } from '../SimuladorProvider';
@@ -43,28 +44,38 @@ export function CatalogoFaixa() {
       </div>
 
       <div ref={faixa} className="catalogo-faixa mt-8 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-2 sm:px-10">
-        {lista.map((moto) => (
-          <a key={moto.id} href={`/motos/${moto.id}`} className="group w-[86vw] shrink-0 snap-start sm:w-[62vw] lg:w-[44vw]">
+        {SLIDES_HERO.map((slide) => (
+          <a key={slide.id} href="#contato" className="group w-[86vw] shrink-0 snap-start sm:w-[62vw] lg:w-[44vw]">
             <span className="relative block h-[68vh] overflow-hidden bg-[#d8d8d8]">
               <Image
-                src={moto.foto}
-                alt={moto.nome}
+                src={slide.foto}
+                alt={slide.alt}
                 fill
                 sizes="(min-width: 1024px) 44vw, 86vw"
-                className="object-cover transition duration-700 ease-out group-hover:scale-[1.05]"
-                style={{ objectPosition: moto.enquadramento ?? 'center' }}
+                className="object-cover transition duration-700 ease-out group-hover:scale-[1.04]"
+                style={{ objectPosition: slide.enquadramento }}
               />
             </span>
             <span className="mt-4 flex items-end justify-between gap-4">
               <span>
-                <span className="block text-[11px] font-semibold uppercase tracking-[0.22em] text-black/45">{moto.categoria}</span>
-                <span className="titulo-campanha mt-1 block text-4xl sm:text-5xl">{nomeModelo(moto.nome)}</span>
-                {moto.preco !== undefined && <span className="mt-1 block text-sm">A partir de {formatBRL(moto.preco)}</span>}
+                <span className="block text-[11px] font-semibold uppercase tracking-[0.22em] text-black/45">{slide.linha}</span>
+                <span className="titulo-campanha mt-1 block text-4xl sm:text-5xl">{slide.titulo}</span>
               </span>
-              <span className="pb-1 text-[12px] font-semibold uppercase tracking-[0.16em] text-[#1565C0]">Ver</span>
             </span>
           </a>
         ))}
+      </div>
+
+      <div className="mt-14 px-5 sm:px-10">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.22em] text-black/45">Modelos na loja</p>
+        <div className="mt-5 flex flex-wrap gap-x-10 gap-y-4">
+          {lista.map((moto) => (
+            <a key={moto.id} href={`/motos/${moto.id}`} className="text-2xl font-semibold tracking-tight transition hover:text-[#1565C0] sm:text-3xl">
+              {nomeModelo(moto.nome)}
+              {moto.preco !== undefined && <span className="ml-3 text-sm font-normal text-black/50">A partir de {formatBRL(moto.preco)}</span>}
+            </a>
+          ))}
+        </div>
       </div>
 
       {carros.length > 0 && (

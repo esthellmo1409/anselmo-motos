@@ -33,7 +33,7 @@ export interface Veiculo {
 }
 
 /** Foto da primeira tela. Substitua o arquivo em /public/images/hero/principal.jpg */
-export const IMAGEM_HERO = '/images/hero/principal.jpg';
+export const IMAGEM_HERO = '/images/hero/africa-twin.jpg';
 
 export function nomeModelo(nome: string) {
   return nome.replace(/^Honda\s+/i, '');
