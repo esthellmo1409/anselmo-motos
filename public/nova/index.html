@@ -547,9 +547,9 @@ a.ci:hover svg{transform:translateY(-2px)}
   .hero-stage{position:relative;inset:auto;height:auto}
   .slide{position:absolute;inset:0;height:0;overflow:hidden;pointer-events:none}
   .slide.on{position:relative;height:auto;overflow:visible;pointer-events:auto;clip-path:none}
-  .slide .media,.slide.on .media,.slide.leaving .media{position:relative;inset:auto;height:auto;aspect-ratio:16/9;transform:none}
+  .slide .media,.slide.on .media,.slide.leaving .media{position:relative;inset:auto;height:auto;aspect-ratio:4/3;transform:none}
   .slide .slot{position:absolute;inset:0}
-  .slide .slot.full img.photo{object-fit:cover;object-position:center center;filter:none}
+  .slide .slot.full img.photo{object-fit:cover;object-position:center 46%;filter:none}
   .slide::after,.slide.is-full::after,.slide.right.is-full::after{background:none}
   .slide-copy{position:relative;bottom:auto;padding-top:22px;padding-bottom:4px}
   .slide-copy h1,.slide-copy h2,.slide.right .slide-copy h2{font-size:clamp(28px,7.6vw,40px);max-width:16ch}
@@ -557,32 +557,48 @@ a.ci:hover svg{transform:translateY(-2px)}
   .slide-copy,.slide.right .slide-copy{align-items:stretch;text-align:left}
   .slide-copy .ctas{flex-direction:column;align-items:stretch;width:100%}
   .slide-copy .ctas .btn{flex:none;width:100%;min-width:0;padding:0 16px;font-size:15px}
-  .hero-side{display:none}
+  .hero-side{display:grid;top:calc(72px + 37.5vw);width:46px;height:46px;margin-top:-23px;background:rgba(11,13,18,.82)}
+  .hero-side.l{left:10px}
+  .hero-side.r{right:10px}
   .slide.right .slide-copy{padding-right:0}
   .slide.right .slide-copy .ctas{justify-content:flex-start}
-  .hero-ui{position:relative;bottom:auto;padding-top:16px;padding-bottom:8px}
-  .dot{font-size:0;padding-top:0;height:14px}
+  .hero-ui{position:relative;bottom:auto;padding-top:18px;padding-bottom:10px;align-items:center}
+  .dots{max-width:none;overflow-x:auto;scrollbar-width:none;gap:16px}
+  .dots::-webkit-scrollbar{display:none}
+  .dot{flex:none;font-size:13px;padding-top:12px;height:auto;white-space:nowrap}
   .hero-arrows{display:none}
   .slide .ph .mark{left:50%;top:30%;width:86%}
   .editbar{top:auto;bottom:calc(84px + env(safe-area-inset-bottom,0px));font-size:12px}
   .show-head .lead{display:none}
   .show-num{font-size:52px}
   .show-cat{margin-top:18px}
-  .show-nav .circ{display:none}
-  .show-list{flex-wrap:wrap;overflow:visible;row-gap:4px}
+  .show{position:relative}
+  .show-media{aspect-ratio:1/1}
+  .show-media img.photo{padding:3% 4%!important;object-fit:contain!important}
+  .show-nav{display:grid;grid-template-columns:1fr;align-items:center;gap:10px 12px}
+  .show-nav .circ{display:grid;position:absolute;z-index:6;top:calc(92px + (100vw - 2 * var(--pad)) / 2 - 27px);background:#fff;color:#0B0D12;border-color:transparent;box-shadow:0 8px 20px rgba(11,13,18,.28)}
+  #sPrev{left:28px}
+  #sNext{right:28px}
+  .show-list{grid-column:1 / -1;grid-row:2;flex-wrap:wrap;overflow:visible;row-gap:8px;gap:8px 16px}
   .show-list button{white-space:normal}
-  .track,.team-track{padding-inline:0;scroll-padding-inline:0;gap:0}
-  .tile{flex:0 0 100%;scroll-snap-align:start}
-  .mate{flex:0 0 100%;min-width:0;box-sizing:border-box;padding-inline:var(--pad);scroll-snap-align:start}
-  .mate-ph{aspect-ratio:3/2}
+  .show-nav::after{content:"Toque na seta ou no nome para ver a próxima moto";grid-column:1 / -1;grid-row:3;font-size:13px;color:var(--mute)}
+  .track,.team-track{display:flex;flex-direction:column;overflow:visible;gap:18px;padding-inline:var(--pad);scroll-snap-type:none}
+  .tile{flex:none;width:100%;scroll-snap-align:none}
+  .tile .slot{aspect-ratio:4/3}
+  .tile .slot.cutout img.photo{padding:4% 6%!important}
+  .tile-body{min-height:0;padding:16px 16px 18px}
+  .tile .more{position:static;opacity:1;transform:none;color:var(--blue);margin-top:12px}
+  .mate{flex:none;width:100%;min-width:0;padding-inline:0;scroll-snap-align:none}
+  .mate-ph{aspect-ratio:4/3}
+  .mate-ph img{object-position:center 15%}
   .mate-wa{white-space:normal;text-align:center;line-height:1.25;padding:8px 12px}
   .plan{padding:14px 10px 12px}
   .plan b{font-size:15px;letter-spacing:-.02em}
   .credit-row output{font-size:clamp(22px,6.4vw,32px)}
   .stepb{width:40px;height:40px;flex:none}
   .navbtn{display:none!important}
-  .cat-head .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:calc(100% + 2*var(--pad));margin-inline:calc(-1*var(--pad));padding-inline:var(--pad)}
-  .cat-head .tabs::-webkit-scrollbar{display:none}
+  .cat-head{align-items:flex-start}
+  .cat-head .tabs{flex-wrap:wrap;overflow:visible;width:100%;margin:0;padding:0}
   .cat-head .tabs button{flex:none}
   .cat-foot{display:none}
   .mbar{display:flex}
