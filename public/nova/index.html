@@ -1,0 +1,1305 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0B0D12">
+<title>Anselmo Motos | Motos Honda e Consórcio Canopus em Bacabal</title>
+<meta name="description" content="Motos Honda, Consórcio Canopus e financiamento em Bacabal-MA. Fale com um consultor da Anselmo Motos pelo WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0B0D12; --ink-2:#161A22; --paper:#FFFFFF; --mist:#F2F3F5; --line:#E2E4E8; --mute:#6B7280; --mute-d:#9AA1AD;
+  --blue:#0057EF; --blue-d:#0046C4;
+  --font:'Archivo','Arial Narrow',Arial,sans-serif;
+  --ease:cubic-bezier(.16,1,.3,1); --ease-io:cubic-bezier(.77,0,.18,1);
+  --pad:clamp(20px,5vw,72px);
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));background:var(--ink)}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;padding:0}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.wrap{padding-inline:var(--pad);max-width:1440px;margin-inline:auto}
+.x{font-stretch:118%}
+.h-display{font-weight:800;font-stretch:118%;line-height:.92;letter-spacing:-.01em;margin:0}
+.h-sec{font-weight:800;font-stretch:112%;font-size:clamp(28px,3.2vw,48px);line-height:1.02;letter-spacing:-.01em;margin:0}
+.lead{font-size:clamp(16px,1.15vw,18px);color:var(--mute);max-width:34ch;margin:0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;font-weight:700;font-size:15px;letter-spacing:.01em;border-radius:3px;transition:background .3s var(--ease),color .3s,border-color .3s,transform .3s var(--ease)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:var(--blue-d)}
+.btn-line{border:1px solid currentColor}
+.btn-line:hover{background:rgba(127,127,127,.12)}
+.btn-ink{background:var(--ink);color:#fff}
+.btn-ink:hover{background:#000}
+.arrow{display:inline-block;width:22px;height:1px;background:currentColor;position:relative;transition:width .4s var(--ease)}
+.arrow::after{content:"";position:absolute;right:0;top:-3px;width:7px;height:7px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg)}
+a:hover .arrow,button:hover .arrow{width:34px}
+
+/* ---------- Espaço de foto (pronto para receber a imagem real) ---------- */
+.slot{position:relative;overflow:hidden;isolation:isolate}
+.slot img.photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.slot.contain img.photo{object-fit:contain;padding:4% 6%}
+.slot .ph{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.slot.has-photo .ph{display:none}
+.slot.has-photo img.photo{object-fit:cover!important;padding:0!important}
+.slot.dark img.photo{filter:brightness(.8) contrast(1.07) saturate(.88)}
+.slot .ph{z-index:1}
+.slot.has-photo.cutout .ph{display:block}
+.slot.cutout .ph .mark{display:none}
+.slot.has-photo.cutout img.photo{object-fit:contain!important;z-index:2}
+.slot.dark.cutout img.photo{filter:drop-shadow(0 34px 38px rgba(0,0,0,.55))}
+.slot.light.cutout img.photo{padding:5% 7%!important}
+.slide .slot.cutout img.photo{inset:auto;right:1%;bottom:12%;width:54%;height:78%;object-position:right bottom}
+.slide .slot.cutout::before{content:"";position:absolute;right:4%;bottom:6%;width:50%;height:70%;background:radial-gradient(closest-side,rgba(120,150,210,.16),rgba(120,150,210,0));z-index:0}
+.ph .beam{position:absolute;left:50%;top:0;width:90%;height:100%;transform:translateX(-50%);background:radial-gradient(46% 70% at 50% 0%,rgba(255,255,255,.11),rgba(255,255,255,0) 72%)}
+.ph .mark{position:absolute;left:50%;top:48%;width:min(60%,720px);transform:translate(-50%,-50%);opacity:.06;filter:brightness(0)}
+.slot.dark .ph .mark{filter:grayscale(1) brightness(1.6);opacity:.08}
+.ph .floor{position:absolute;left:0;right:0;top:74%;height:1px;background:linear-gradient(90deg,rgba(127,127,127,0),rgba(127,127,127,.28),rgba(127,127,127,0))}
+.slot.dark .ph .floor{background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.16),rgba(255,255,255,0))}
+.ph .trail{display:none}
+.slot.dark .ph .trail{display:block;position:absolute;left:0;top:var(--ty,64%);width:46%;height:2px;border-radius:2px;background:linear-gradient(90deg,rgba(0,87,239,0),rgba(0,87,239,.55) 55%,rgba(150,190,255,.95) 92%,#fff);box-shadow:0 0 18px 2px rgba(0,87,239,.45);transform:translateX(-110%) rotate(var(--tr,-5deg));transform-origin:right center;animation:trail var(--td,6.5s) cubic-bezier(.55,0,.25,1) var(--tdl,.6s) infinite;opacity:0}
+.slot.dark .ph .trail.t2{--ty:71%;--tr:-3deg;width:30%;height:1px;--tdl:1.1s;box-shadow:0 0 10px 1px rgba(0,87,239,.35)}
+@keyframes trail{0%{transform:translateX(-110%) rotate(var(--tr,-5deg));opacity:0}8%{opacity:1}42%{opacity:1}55%,100%{transform:translateX(260%) rotate(var(--tr,-5deg));opacity:0}}
+.slide .ph .mark{left:66%;top:44%;width:min(54%,820px)}
+.slot .edit-chip{display:none}
+body.editing .slot .edit-chip{display:inline-flex;position:absolute;z-index:6;right:14px;top:14px;align-items:center;gap:8px;min-height:40px;padding:0 16px;border-radius:999px;background:#fff;color:var(--ink);font-size:13px;font-weight:700;box-shadow:0 2px 10px rgba(0,0,0,.18);pointer-events:auto}
+body.editing .slide .slot .edit-chip{top:42%;right:var(--pad)}
+body.editing .slot{outline:2px dashed rgba(0,87,239,.7);outline-offset:-2px}
+.slide::after{pointer-events:none}
+body.editing .slide .media{transition:none!important;transform:none!important}
+body.editing .slide::after{z-index:0}
+.editbar{position:fixed;z-index:60;left:50%;top:calc(88px + env(safe-area-inset-top,0px));transform:translateX(-50%);display:none;align-items:center;gap:14px;padding:10px 12px 10px 18px;background:#fff;color:var(--ink);border-radius:999px;box-shadow:0 6px 24px rgba(0,0,0,.25);font-size:13px;font-weight:600;white-space:nowrap}
+body.editing .editbar{display:flex}
+.editbar button{min-height:36px;padding:0 14px;border-radius:999px;font-weight:700}
+.editbar .ok{background:var(--ink);color:#fff}
+.ft .test{margin-top:18px;font-size:13px;text-decoration:underline;text-underline-offset:3px;color:rgba(255,255,255,.55)}
+.slot.light{background:radial-gradient(120% 85% at 50% 108%,#DADDE2 0%,#EEF0F2 42%,#F7F8F9 100%)}
+.slot.light::after{content:"";position:absolute;left:12%;right:12%;bottom:13%;height:9%;background:radial-gradient(closest-side,rgba(11,13,18,.16),rgba(11,13,18,0));z-index:-1}
+.slot.dark{background:radial-gradient(90% 75% at 58% 62%,#2A303B 0%,#161A21 48%,#0B0D12 100%);--phc:rgba(255,255,255,.12);--phm:rgba(255,255,255,.38)}
+.slot.dark::after{content:"";position:absolute;left:18%;right:8%;bottom:16%;height:10%;background:radial-gradient(closest-side,rgba(0,0,0,.5),rgba(0,0,0,0));z-index:-1}
+
+/* ---------- Header ---------- */
+.hd{position:fixed;inset:0 0 auto;z-index:50;color:#fff;transition:background .5s var(--ease),transform .5s var(--ease)}
+.hd::before{content:"";position:absolute;inset:0;background:var(--ink);opacity:0;transition:opacity .5s var(--ease);padding-top:env(safe-area-inset-top,0px);margin-top:calc(-1 * env(safe-area-inset-top,0px))}
+.hd.solid::before{opacity:1}
+.hd.hide{transform:translateY(-100%)}
+.hd-in{position:relative;display:flex;align-items:center;height:76px;gap:40px;padding-top:env(safe-area-inset-top,0px);box-sizing:content-box}
+.hd-logo img{height:46px;width:auto}
+.nav{display:flex;gap:32px;margin-left:auto;font-size:15px;font-weight:600}
+.nav a,.nav button{position:relative;opacity:.86;transition:opacity .3s}
+.nav a:hover,.nav button:hover,.nav button[aria-expanded="true"]{opacity:1}
+.nav a::after,.nav button::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform .45s var(--ease)}
+.nav a:hover::after,.nav button:hover::after,.nav button[aria-expanded="true"]::after{transform:scaleX(1);transform-origin:left}
+.hd-wa{margin-left:8px;min-height:44px;padding:0 20px;font-size:14px}
+.burger{display:none;margin-left:auto;width:44px;height:44px;position:relative}
+.burger i{position:absolute;left:11px;right:11px;height:1.5px;background:currentColor;transition:transform .5s var(--ease),top .5s var(--ease)}
+.burger i:first-child{top:17px}.burger i:last-child{top:26px}
+.menu-open .burger i:first-child{top:21px;transform:rotate(45deg)}
+.menu-open .burger i:last-child{top:21px;transform:rotate(-45deg)}
+/* mega menu Motos */
+.mega{position:absolute;left:0;right:0;top:100%;background:var(--ink);color:#fff;clip-path:inset(0 0 100% 0);transition:clip-path .6s var(--ease);border-top:1px solid rgba(255,255,255,.08)}
+.mega.open{clip-path:inset(0 0 0 0)}
+.mega-in{display:grid;grid-template-columns:repeat(auto-fill,minmax(215px,1fr));gap:34px 40px;padding-block:40px 48px}
+.mega h4{margin:0 0 16px;font-size:13px;font-weight:600;color:var(--mute-d)}
+.mega ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.mega li a{font-size:17px;font-weight:600;font-stretch:106%;display:inline-flex;align-items:center;gap:12px;opacity:0;transform:translateY(12px);transition:opacity .5s var(--ease),transform .5s var(--ease),color .3s}
+.mega.open li a{opacity:1;transform:none}
+.mega li a:hover{color:#7FA8FF}
+.mega li a img{width:72px;height:44px;object-fit:contain;flex:none;transition:transform .5s var(--ease)}
+.mega li a:hover img{transform:translateX(4px) scale(1.06)}
+.mega ul{gap:6px}
+.mega-all{align-self:end;justify-self:end;display:inline-flex;gap:14px;align-items:center;font-weight:600}
+/* mobile menu */
+.mm{position:fixed;inset:0;z-index:49;background:var(--ink);color:#fff;clip-path:inset(0 0 100% 0);transition:clip-path .75s var(--ease-io);display:flex;flex-direction:column;padding:calc(100px + env(safe-area-inset-top,0px)) var(--pad) calc(28px + env(safe-area-inset-bottom,0px))}
+.menu-open .mm{clip-path:inset(0 0 0 0)}
+.mm nav{display:grid;gap:4px}
+.mm nav a{font-size:clamp(28px,8vw,40px);font-weight:800;font-stretch:115%;line-height:1.12;opacity:0;transform:translateY(30px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
+.menu-open .mm nav a{opacity:1;transform:none}
+.mm .btn{margin-top:auto;opacity:0;transition:opacity .6s .45s}
+.menu-open .mm .btn{opacity:1}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;height:100svh;min-height:620px;background:var(--ink);color:#fff;overflow:hidden}
+.hero-stage{position:absolute;inset:0;will-change:transform}
+.slide{position:absolute;inset:0;clip-path:inset(0 0 0 100%);z-index:1}
+.slide.on{clip-path:inset(0 0 0 0);z-index:2}
+.slide.leaving{clip-path:inset(0 0 0 0);z-index:1}
+.slide.entering{z-index:3;transition:clip-path 1.1s var(--ease-io)}
+.slide .slot{position:absolute;inset:0;--phs:clamp(90px,19vw,340px)}
+.slide .media{position:absolute;inset:0;transform:scale(1.08);transition:transform 7s cubic-bezier(.2,.6,.3,1)}
+.slide.on .media,.slide.leaving .media{transform:scale(1)}
+.slide.leaving .media{transform:scale(1.04) translateX(-3%);transition:transform 1.1s var(--ease-io)}
+.slide::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,13,18,.82) 0%,rgba(11,13,18,.35) 42%,rgba(11,13,18,0) 70%),linear-gradient(0deg,rgba(11,13,18,.7),rgba(11,13,18,0) 38%)}
+.slide-copy{position:absolute;z-index:4;left:0;right:0;bottom:clamp(120px,19vh,190px);pointer-events:none}
+.slide-copy .ctas{pointer-events:auto}
+.slide-copy .k{font-size:13px;font-weight:600;color:#9DB8FF;margin:0 0 14px;letter-spacing:.02em}
+.slide-copy h1,.slide-copy h2{font-size:clamp(36px,4.4vw,68px);max-width:18ch;line-height:1}
+.slide-copy .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{white-space:nowrap}
+.slide-copy .line{display:block;overflow:hidden}
+.slide-copy .line>span{display:block;transform:translateY(105%);transition:transform 1s var(--ease)}
+.slide-copy .k,.slide-copy .ctas{opacity:0;transform:translateX(-28px);transition:opacity .8s var(--ease),transform .9s var(--ease)}
+.slide.on .slide-copy .line>span{transform:none}
+.slide.on .slide-copy .k,.slide.on .slide-copy .ctas{opacity:1;transform:none}
+.slide.on .slide-copy .line:nth-child(1)>span{transition-delay:.25s}
+.slide.on .slide-copy .line:nth-child(2)>span{transition-delay:.33s}
+.slide.on .slide-copy .line:nth-child(3)>span{transition-delay:.41s}
+.slide.on .slide-copy .k{transition-delay:.15s}
+.slide.on .slide-copy .ctas{transition-delay:.55s}
+.hero-ui{position:absolute;z-index:5;left:0;right:0;bottom:36px;display:flex;align-items:end;gap:28px}
+.dots{display:flex;gap:18px;flex:1;max-width:620px}
+.dot{flex:1;text-align:left;font-size:13px;font-weight:600;color:rgba(255,255,255,.55);padding-top:14px;position:relative;transition:color .3s}
+.dot::before,.dot i{content:"";position:absolute;left:0;top:0;height:2px;right:0;background:rgba(255,255,255,.2)}
+.dot i{background:#fff;transform:scaleX(0);transform-origin:left}
+.dot.on{color:#fff}
+.dot.on i{animation:prog var(--dur,7000ms) linear forwards}
+.hero.paused .dot.on i{animation-play-state:paused}
+@keyframes prog{to{transform:scaleX(1)}}
+.hero-arrows{display:flex;gap:6px}
+.hero-arrows button{width:52px;height:52px;border:1px solid rgba(255,255,255,.25);display:grid;place-items:center;border-radius:50%;transition:background .3s,border-color .3s}
+.hero-arrows button:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.5)}
+.hero-arrows svg{width:18px;height:18px}
+.scroll-cue{position:absolute;z-index:5;right:var(--pad);bottom:36px;display:none}
+.hero-in-wait .hero-stage{transform:scale(.94);opacity:0}
+.hero-go .hero-stage{transition:transform 1.6s var(--ease),opacity 1s var(--ease)}
+
+
+.slide .slot.full img.photo{object-fit:cover!important;object-position:var(--pos,50% 50%);filter:brightness(.78) contrast(1.08) saturate(.85)}
+.slide.is-full::after{background:linear-gradient(90deg,rgba(11,13,18,.88) 0%,rgba(11,13,18,.55) 34%,rgba(11,13,18,.05) 62%),linear-gradient(0deg,rgba(11,13,18,.75),rgba(11,13,18,0) 42%),linear-gradient(180deg,rgba(11,13,18,.55),rgba(11,13,18,0) 22%)}
+.slide.right .slide-copy{display:flex;flex-direction:column;align-items:flex-end;text-align:right;padding-right:calc(var(--pad) + 56px)}
+.slide.right .slide-copy .ctas{justify-content:flex-end}
+.slide.right .slide-copy h2{font-size:clamp(36px,4.4vw,68px);max-width:16ch}
+.slide.right .slide-copy .k,.slide.right .slide-copy .ctas{transform:translateX(28px)}
+.slide.right.on .slide-copy .k,.slide.right.on .slide-copy .ctas{transform:none}
+.slide.right.is-full::after{background:linear-gradient(270deg,rgba(11,13,18,.9) 0%,rgba(11,13,18,.6) 34%,rgba(11,13,18,.05) 62%),linear-gradient(0deg,rgba(11,13,18,.7),rgba(11,13,18,0) 40%),linear-gradient(180deg,rgba(11,13,18,.55),rgba(11,13,18,0) 22%)}
+.slot.full img.photo{object-fit:cover!important;padding:0!important}
+.fin .slot.full img.photo{object-position:40% 60%}
+.exp .slot.full img.photo{object-position:50% 50%;filter:brightness(.8) contrast(1.06) saturate(.9)}
+/* setas laterais e pausa */
+.hero-side{position:absolute;z-index:6;top:50%;width:56px;height:56px;margin-top:-28px;border-radius:50%;background:rgba(11,13,18,.72);color:#fff;display:grid;place-items:center;border:1px solid rgba(255,255,255,.14);transition:background .3s,transform .4s var(--ease)}
+.hero-side:hover{background:var(--blue);transform:scale(1.06)}
+.hero-side svg{width:20px;height:20px}
+.hero-side.l{left:24px}.hero-side.r{right:24px}
+.hero-pause{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;color:#fff;flex:none;transition:background .3s}
+.hero-pause:hover{background:rgba(255,255,255,.12)}
+.hero-pause svg{width:14px;height:14px}
+.hero-arrows{display:none!important}
+.hero.stopped .dot.on i{animation-play-state:paused}
+/* ---------- Revelações no scroll ---------- */
+[data-r]{transition:opacity 1s var(--ease),transform 1.1s var(--ease),clip-path 1.2s var(--ease-io)}
+[data-r="up"]{opacity:0;transform:translateY(46px)}
+[data-r="left"]{opacity:0;transform:translateX(-60px)}
+[data-r="mask"]{clip-path:inset(100% 0 0 0)}
+[data-r="wipe"]{clip-path:inset(0 100% 0 0)}
+[data-r].in{opacity:1;transform:none;clip-path:inset(0 0 0 0)}
+[data-r].in.d1{transition-delay:.08s}[data-r].in.d2{transition-delay:.16s}[data-r].in.d3{transition-delay:.24s}
+
+/* ---------- Vitrine editorial ---------- */
+.show{position:relative;background:var(--paper);padding-block:clamp(72px,8vw,120px) clamp(56px,6vw,90px);overflow:hidden}
+.show-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:clamp(20px,3vw,40px)}
+.show-grid{display:grid;grid-template-columns:minmax(300px,.8fr) 1.6fr;gap:clamp(24px,4vw,64px);align-items:center}
+.show-copy{position:relative;z-index:2}
+.show-num{font-size:clamp(48px,5vw,80px);font-weight:900;font-stretch:125%;line-height:.8;color:var(--blue);display:flex;overflow:hidden;height:.8em;letter-spacing:-.03em}
+.show-num span{display:block;transition:transform .9s var(--ease)}
+.roll{display:block;overflow:hidden}
+.roll>span{display:block;transition:transform .8s var(--ease),opacity .6s}
+.show-cat{font-size:13px;font-weight:600;color:var(--mute);margin:18px 0 6px}
+.show-name{font-size:clamp(30px,3vw,48px);font-weight:800;font-stretch:112%;line-height:1;margin:0;letter-spacing:-.015em}
+.show-line{font-size:16px;color:var(--mute);max-width:32ch;margin:14px 0 22px;min-height:3.1em}
+.slot img.photo{transition:opacity .35s ease}
+.swatches{display:flex;align-items:center;gap:10px;margin:-8px 0 26px}
+.swatches span{font-size:13px;color:var(--mute);margin-right:4px;min-width:62px}
+.sw{width:26px;height:26px;border-radius:50%;background:var(--c);box-shadow:inset 0 0 0 1px rgba(0,0,0,.12);position:relative;transition:transform .3s var(--ease)}
+.sw::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1.5px solid transparent;transition:border-color .3s}
+.sw[aria-pressed="true"]::after{border-color:var(--ink)}
+.sw:hover{transform:scale(1.1)}
+.tile .swatches{margin:14px 0 0;gap:8px}
+.tile .sw{width:18px;height:18px}
+.tile .sw::after{inset:-4px}
+.show-price{font-size:14px;color:var(--mute);margin-bottom:26px}
+.show-price b{display:block;color:var(--ink);font-size:18px;font-weight:700;font-stretch:110%}
+.show-media{position:relative;aspect-ratio:16/10}
+.show-media .slot{position:absolute;inset:0;transition:transform 1s var(--ease),opacity .8s var(--ease),filter .8s}
+.show-media .slot.out{transform:translateX(-14%) scale(.9);opacity:0;filter:blur(3px)}
+.show-media .slot.pre{transform:translateX(14%) scale(.88);opacity:0}
+.show-nav{display:flex;align-items:center;gap:26px;margin-top:clamp(28px,4vw,50px);border-top:1px solid var(--line);padding-top:22px}
+.show-list{display:flex;gap:26px;flex:1;overflow-x:auto;scrollbar-width:none}
+.show-list::-webkit-scrollbar{display:none}
+.show-list button{font-weight:700;font-stretch:112%;font-size:15px;color:var(--mute-d);white-space:nowrap;transition:color .3s;padding:6px 0}
+.show-list button[aria-current="true"]{color:var(--ink)}
+.circ{width:54px;height:54px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:background .3s,border-color .3s,color .3s}
+.circ:hover{background:var(--ink);border-color:var(--ink);color:#fff}
+.circ svg{width:18px;height:18px}
+
+/* ---------- Catálogo ---------- */
+.cat{background:var(--mist);padding-block:clamp(72px,8vw,120px);overflow:hidden}
+.cat-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 40px;margin-bottom:28px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap}
+.tabs button{min-height:42px;padding:0 18px;border-radius:999px;font-size:14px;font-weight:600;border:1px solid transparent;color:var(--mute);transition:all .3s var(--ease)}
+.tabs button:hover{color:var(--ink)}
+.tabs button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.track{display:flex;gap:clamp(14px,1.6vw,24px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-inline:var(--pad);scroll-padding-inline:var(--pad);padding-bottom:6px}
+.track::-webkit-scrollbar{display:none}
+/* card no estilo vitrine de montadora */
+.trackwrap{position:relative}
+.trackwrap .track{padding-top:12px;padding-bottom:44px;margin-bottom:-32px}
+.tile{flex:0 0 clamp(270px,26vw,380px);scroll-snap-align:start;position:relative;background:#fff;border:1px solid #E4E6EA;display:flex;flex-direction:column;overflow:hidden;transition:opacity .5s var(--ease),transform .6s var(--ease),border-color .4s,box-shadow .5s var(--ease)}
+.tile.hidden{display:none}
+.tile .slot{aspect-ratio:1/1;background:#fff!important}
+.tile .slot::after{display:none}
+.tile .slot .ph .floor{top:70%}
+.tile .slot .zoom{position:absolute;inset:0;transition:transform .9s var(--ease)}
+.tile .slot.cutout img.photo{padding:14% 9%!important}
+.tile-body{position:relative;flex:1;background:#F0F1F2;padding:24px 26px 26px;min-height:128px;transition:background .45s var(--ease),color .45s var(--ease)}
+.tile small{display:none}
+.tile h3{margin:0;font-size:clamp(20px,1.6vw,24px);font-weight:800;font-stretch:108%;line-height:1.15;color:#3A3F47;transition:color .45s var(--ease),transform .5s var(--ease)}
+.tile .price{margin:8px 0 0;font-size:16px;color:#5B616B;transition:color .45s var(--ease),transform .5s var(--ease)}
+.tile p.txt{display:none}
+.tile .more{position:absolute;left:26px;bottom:22px;display:flex;align-items:center;gap:12px;font-size:14px;font-weight:700;color:#fff;opacity:0;transform:translateY(12px);transition:opacity .4s var(--ease),transform .5s var(--ease)}
+.tile .go{display:none}
+@media (hover:hover){
+  .tile:hover{border-color:transparent;box-shadow:0 22px 50px -24px rgba(11,13,18,.45);transform:translateY(-6px)}
+  .tile:hover .slot .zoom{transform:scale(1.07) translateX(-2%)}
+  .tile:hover .tile-body{background:var(--ink)}
+  .tile:hover h3{color:#fff;transform:translateY(-6px)}
+  .tile:hover .price{color:rgba(255,255,255,.7);transform:translateY(-6px)}
+  .tile:hover .swatches{opacity:0}
+  .tile:hover .more{opacity:1;transform:none}
+  .tile.has-sw:hover .more{bottom:22px}
+}
+.tile .swatches{transition:opacity .3s}
+.navbtn{position:absolute;top:calc(50% - 64px);z-index:5;width:64px;height:64px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;box-shadow:0 10px 26px -8px rgba(0,87,239,.6);transition:transform .4s var(--ease),opacity .4s,background .3s}
+.navbtn:hover{background:var(--blue-d);transform:scale(1.06)}
+.navbtn svg{width:22px;height:22px}
+.navbtn.next{right:calc(var(--pad) - 24px)}
+.navbtn.prev{left:calc(var(--pad) - 24px)}
+.navbtn[hidden]{display:grid;opacity:0;pointer-events:none;transform:scale(.8)}
+
+/* ---------- Experiência ---------- */
+.exp{position:relative;min-height:88svh;background:var(--ink);color:#fff;overflow:hidden;display:flex;align-items:flex-end}
+.exp .bg{position:absolute;inset:-7% 0;will-change:transform}
+.exp .bg .slot{position:absolute;inset:0;--phs:clamp(80px,16vw,300px)}
+.exp::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,13,18,.92) 8%,rgba(11,13,18,.25) 60%,rgba(11,13,18,.5))}
+.exp-copy{position:relative;z-index:2;width:100%;padding-block:0 clamp(80px,12vw,150px)}
+.exp-copy .k{font-size:14px;font-weight:600;color:#9DB8FF;margin:0 0 20px}
+.exp-copy h2{font-size:clamp(30px,3.4vw,54px);max-width:16ch;line-height:1.04}
+.exp-copy p{font-size:clamp(15px,1.1vw,17px);color:rgba(255,255,255,.72);max-width:44ch;margin:28px 0 0}
+
+/* ---------- Consórcio ---------- */
+.cons{background:var(--paper);padding-block:clamp(72px,8vw,130px)}
+.cons-top{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(24px,5vw,90px);align-items:end;margin-bottom:clamp(36px,4vw,60px)}
+.cons-brand{font-size:14px;font-weight:600;color:var(--blue);margin:0 0 20px}
+.cons-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,110px);align-items:start}
+.conds{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.conds li{display:flex;align-items:baseline;gap:16px;padding:15px 0;border-bottom:1px solid var(--line);font-size:clamp(15px,1.15vw,18px);font-weight:600;font-stretch:104%;line-height:1.25}
+.conds li::before{content:"";flex:none;width:8px;height:8px;background:var(--blue);transform:translateY(-3px)}
+.cons-note{font-size:13px;color:var(--mute);margin:18px 0 0;max-width:52ch}
+.sim{background:var(--ink);color:#fff;padding:clamp(28px,3.4vw,48px);position:sticky;top:100px}
+.sim h3{margin:0 0 26px;font-size:22px;font-weight:800;font-stretch:112%}
+.seg2{display:grid;grid-template-columns:1fr 1fr;border:1px solid rgba(255,255,255,.18);margin-bottom:26px}
+.seg2 button{min-height:48px;font-weight:600;font-size:15px;color:rgba(255,255,255,.62);transition:background .3s,color .3s}
+.seg2 button[aria-pressed="true"]{background:#fff;color:var(--ink)}
+.sim label.t{display:flex;justify-content:space-between;font-size:14px;color:rgba(255,255,255,.6);margin-bottom:10px}
+.sim .val{font-size:clamp(28px,2.6vw,38px);font-weight:900;font-stretch:118%;line-height:1;margin-bottom:18px}
+.sim input[type=range]{width:100%;appearance:none;-webkit-appearance:none;height:2px;background:linear-gradient(90deg,#fff var(--p,0%),rgba(255,255,255,.2) var(--p,0%));outline-offset:8px}
+.sim input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:var(--blue);border:4px solid #fff;cursor:grab}
+.sim input[type=range]::-moz-range-thumb{width:18px;height:18px;border-radius:50%;background:var(--blue);border:4px solid #fff;cursor:grab}
+.sim .rng{display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.45);margin:10px 0 28px}
+.sim .out{border-top:1px solid rgba(255,255,255,.14);padding-top:22px;margin-top:4px;display:flex;justify-content:space-between;align-items:end;gap:14px}
+.sim .out small{display:block;font-size:13px;color:rgba(255,255,255,.55)}
+.sim .out b{font-size:clamp(26px,2.3vw,34px);font-weight:900;font-stretch:115%;line-height:1.05;display:block;transition:opacity .25s}
+.sim .field{margin-top:26px}
+.sim .field input{width:100%;min-height:52px;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.28);color:#fff;font:inherit;font-size:17px;padding:0 2px;border-radius:0}
+.sim .field input::placeholder{color:rgba(255,255,255,.4)}
+.sim .field input:focus{outline:none;border-color:#fff}
+.sim .btn{width:100%;margin-top:22px}
+.sim .fine{font-size:12px;color:rgba(255,255,255,.45);margin:16px 0 0;line-height:1.5}
+
+/* consórcio: vantagens, simulador e tabela */
+.perks{list-style:none;margin:0 0 clamp(40px,5vw,64px);padding:0;display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.perks li{display:flex;align-items:flex-start;gap:14px;padding:20px 22px 20px 0;border-bottom:1px solid var(--line);font-size:clamp(15px,1.1vw,17px);font-weight:600;line-height:1.35}
+.perks li i{flex:none;width:28px;height:28px;border-radius:50%;background:rgba(0,87,239,.1);color:var(--blue);display:grid;place-items:center;margin-top:-3px}
+.perks li i svg{width:15px;height:15px}
+.perks li.hl{color:var(--blue)}
+.perks li.hl i{background:var(--blue);color:#fff}
+.cons-grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(20px,3vw,40px);align-items:start}
+.sim2{background:var(--ink);color:#fff;padding:clamp(24px,3vw,40px)}
+.sim2 h3,.tbl h3{margin:0 0 20px;font-size:20px;font-weight:800;font-stretch:108%}
+.sim2 .seg2{margin-bottom:24px}
+.credit small{display:block;font-size:13px;color:rgba(255,255,255,.55);margin-bottom:10px}
+.credit-row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.credit-row output{font-size:clamp(28px,2.6vw,38px);font-weight:900;font-stretch:112%;line-height:1}
+.stepb{width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.25);font-size:22px;line-height:1;display:grid;place-items:center;transition:background .25s,border-color .25s}
+.stepb:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.5)}
+.stepb:disabled{opacity:.3;cursor:default}
+.sim2 input[type=range]{width:100%;appearance:none;-webkit-appearance:none;height:3px;border-radius:3px;background:linear-gradient(90deg,var(--blue) var(--p,0%),rgba(255,255,255,.2) var(--p,0%))}
+.sim2 input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:26px;height:26px;border-radius:50%;background:#fff;border:6px solid var(--blue);cursor:grab}
+.sim2 input[type=range]::-moz-range-thumb{width:16px;height:16px;border-radius:50%;background:#fff;border:6px solid var(--blue);cursor:grab}
+.sim2 .rng{display:flex;justify-content:space-between;font-size:12px;color:rgba(255,255,255,.45);margin:10px 0 24px}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.plan{text-align:left;padding:16px 16px 14px;border:1px solid rgba(255,255,255,.18);transition:background .3s,border-color .3s,color .3s}
+.plan span{display:block;font-size:13px;font-weight:600;color:rgba(255,255,255,.6)}
+.plan b{display:block;font-size:clamp(20px,1.8vw,26px);font-weight:800;font-stretch:108%;margin:6px 0 2px}
+.plan em{font-style:normal;font-size:12px;color:rgba(255,255,255,.5)}
+.plan[aria-checked="true"]{background:#fff;color:var(--ink);border-color:#fff}
+.plan[aria-checked="true"] span,.plan[aria-checked="true"] em{color:var(--mute)}
+.sim2 .field{margin-top:20px}
+.sim2 .field input{width:100%;min-height:50px;background:transparent;border:0;border-bottom:1px solid rgba(255,255,255,.28);color:#fff;font:inherit;font-size:16px;padding:0 2px;border-radius:0}
+.sim2 .field input::placeholder{color:rgba(255,255,255,.4)}
+.sim2 .field input:focus{outline:none;border-color:#fff}
+.sim2 .btn{width:100%;margin-top:20px;white-space:normal;text-align:center}
+.sim2 .fine{font-size:12px;color:rgba(255,255,255,.45);margin:14px 0 0;line-height:1.5}
+.tbl{border:1px solid var(--line);background:#fff}
+.tbl-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:22px 24px 0}
+.tbl-head h3{margin-bottom:14px}
+.tbl-head p{margin:0;font-size:13px;color:var(--mute)}
+.tbl-scroll{max-height:520px;overflow:auto;overscroll-behavior:contain}
+.tbl table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.tbl th{position:sticky;top:0;z-index:1;background:#fff;text-align:left;font-size:12px;font-weight:600;color:var(--mute);padding:12px 24px;border-bottom:1px solid var(--line)}
+.tbl th[data-on]{color:var(--blue)}
+.tbl td{padding:11px 24px;font-size:15px;border-bottom:1px solid #F0F1F3;transition:background .2s}
+.tbl td:first-child{font-weight:700}
+.tbl tbody tr{cursor:pointer}
+.tbl tbody tr:hover td{background:#F5F7FB}
+.tbl td.on{color:var(--blue);font-weight:700}
+.tbl tr.sel td{background:rgba(0,87,239,.08)}
+.tbl tr.sel td:first-child{box-shadow:inset 3px 0 0 var(--blue)}
+.tbl-note{margin:0;padding:14px 24px 18px;font-size:13px;color:var(--mute);border-top:1px solid var(--line)}
+/* ---------- Equipe ---------- */
+.team{background:#fff;padding-block:clamp(72px,8vw,120px);overflow:hidden}
+.team-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 40px;margin-bottom:clamp(28px,3.5vw,44px)}
+.team-head .h-sec{max-width:17ch}
+.team-track{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:clamp(12px,1.4vw,20px);padding-inline:var(--pad);max-width:1440px;margin:0 auto}
+.mate{position:relative;display:flex;flex-direction:column;transition:opacity .4s var(--ease),transform .5s var(--ease)}
+.mate.off{display:none}
+.mate-ph{position:relative;aspect-ratio:1/1;overflow:hidden;background:var(--mist)}
+.mate-ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease)}
+.mate-ph::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .6s var(--ease)}
+.mate:hover .mate-ph img{transform:scale(1.05)}
+.mate:hover .mate-ph::after{transform:none}
+.mate-tag{position:absolute;left:10px;top:10px;padding:5px 10px;border-radius:999px;background:rgba(11,13,18,.72);color:#fff;font-size:11px;font-weight:600}
+.mate h3{margin:16px 0 2px;font-size:17px;font-weight:800;font-stretch:106%}
+.mate p{margin:0;font-size:13px;color:var(--mute)}
+.mate-ct{display:flex;gap:8px;margin-top:14px}
+.mate-wa{flex:1;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:42px;padding:0 10px;background:var(--ink);color:#fff;font-size:13px;font-weight:700;border-radius:3px;white-space:nowrap;transition:background .3s}
+.mate-wa:hover{background:#1FA855}
+.mate-wa svg{width:16px;height:16px;flex:none}
+.mate-ig{flex:none;width:42px;height:42px;border:1px solid var(--line);border-radius:3px;display:grid;place-items:center;transition:border-color .3s,color .3s}
+.mate-ig:hover{border-color:var(--blue);color:var(--blue)}
+.mate-ig svg{width:18px;height:18px}
+@media (max-width:1080px){.team-track{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:720px){.team-track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-padding-inline:var(--pad)}.team-track::-webkit-scrollbar{display:none}.mate{flex:0 0 64vw;scroll-snap-align:start}.team-head .tabs{width:100%}}
+/* ---------- Perguntas frequentes ---------- */
+.faq{background:var(--mist);padding-block:clamp(72px,8vw,120px)}
+.faq-in{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr);gap:clamp(28px,6vw,100px);align-items:start}
+.faq-side{position:sticky;top:110px}
+.faq-side .lead{margin:16px 0 26px}
+.faq-list{border-top:1px solid #DADDE2}
+.qa{border-bottom:1px solid #DADDE2}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-size:clamp(16px,1.25vw,19px);font-weight:700;font-stretch:104%}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary:hover span{color:var(--blue)}
+.qa summary i{position:relative;flex:none;width:34px;height:34px;border-radius:50%;border:1px solid #CDD1D7;transition:background .3s,border-color .3s,transform .4s var(--ease)}
+.qa summary i::before,.qa summary i::after{content:"";position:absolute;left:50%;top:50%;width:12px;height:1.5px;background:currentColor;transform:translate(-50%,-50%)}
+.qa summary i::after{transform:translate(-50%,-50%) rotate(90deg);transition:transform .4s var(--ease)}
+.qa[open] summary i{background:var(--ink);border-color:var(--ink);color:#fff}
+.qa[open] summary i::after{transform:translate(-50%,-50%) rotate(0)}
+.qa-a{overflow:hidden}
+.qa-a p{margin:0 0 22px;max-width:62ch;color:#4B515B;font-size:16px;line-height:1.6}
+@media (max-width:1080px){.faq-in{grid-template-columns:1fr}.faq-side{position:static}}
+/* ---------- Mural de clientes ---------- */
+.mural{background:#fff;padding-block:clamp(72px,8vw,120px);overflow:hidden}
+.mural-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:end;gap:20px 40px;margin-bottom:clamp(28px,3.5vw,48px)}
+.mural-head .h-sec{max-width:18ch}
+.ig-link{display:inline-flex;align-items:center;gap:14px;padding:10px 18px 10px 12px;border:1px solid var(--line);border-radius:999px;font-size:13px;color:var(--mute);transition:border-color .3s,background .3s}
+.ig-link svg{width:30px;height:30px;color:var(--blue)}
+.ig-link b{display:block;color:var(--ink);font-size:15px}
+.ig-link:hover{border-color:var(--ink)}
+.mq{display:grid;gap:14px}
+.mq-row{display:flex;gap:14px;width:max-content;animation:mq var(--mqd,60s) linear infinite}
+.mq-row.rev{animation-direction:reverse}
+.mq:hover .mq-row{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mq-item{position:relative;flex:none;width:clamp(200px,19vw,290px);aspect-ratio:1/1;overflow:hidden;background:var(--mist);cursor:zoom-in;padding:0}
+.mq-row.rev .mq-item{width:clamp(170px,15vw,230px)}
+.mq-item img{width:100%;height:100%;object-fit:cover;transition:transform .9s var(--ease),filter .5s}
+.mq-item::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(11,13,18,.75),rgba(11,13,18,0) 55%);opacity:0;transition:opacity .45s var(--ease)}
+.mq-item figcaption{position:absolute;z-index:1;left:14px;right:14px;bottom:12px;color:#fff;font-size:13px;line-height:1.3;text-align:left;opacity:0;transform:translateY(8px);transition:opacity .45s var(--ease),transform .5s var(--ease)}
+.mq-item figcaption b{display:block;font-size:15px}
+.mq-item:hover img{transform:scale(1.06)}
+.mq-item:hover::after,.mq-item:hover figcaption{opacity:1;transform:none}
+.lb{position:fixed;inset:0;z-index:75;background:rgba(11,13,18,.94);display:grid;place-items:center;opacity:0;pointer-events:none;transition:opacity .35s var(--ease);padding:70px 80px}
+.lb.open{opacity:1;pointer-events:auto}
+.lb figure{margin:0;max-width:min(92vw,900px);text-align:center}
+.lb img{max-width:100%;max-height:78svh;object-fit:contain;margin:0 auto;transform:scale(.96);transition:transform .45s var(--ease)}
+.lb.open img{transform:none}
+.lb figcaption{color:rgba(255,255,255,.8);font-size:15px;margin-top:14px}
+.lb figcaption b{color:#fff}
+.lb-x{position:absolute;top:calc(18px + env(safe-area-inset-top,0px));right:20px;width:48px;height:48px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;display:grid;place-items:center}
+.lb-x svg,.lb-n svg{width:20px;height:20px}
+.lb-n{position:absolute;top:50%;margin-top:-26px;width:52px;height:52px;border-radius:50%;background:rgba(255,255,255,.1);color:#fff;display:grid;place-items:center;transition:background .3s}
+.lb-n:hover,.lb-x:hover{background:var(--blue)}
+.lb-n.l{left:18px}.lb-n.r{right:18px}
+@media (max-width:720px){.lb{padding:70px 12px 90px}.lb-n{top:auto;bottom:calc(20px + env(safe-area-inset-bottom,0px));margin:0}.lb-n.l{left:calc(50% - 64px)}.lb-n.r{right:calc(50% - 64px)}.mq-item{width:150px}.mq-row.rev .mq-item{width:130px}.mq-item figcaption{opacity:1;transform:none;font-size:11px}.mq-item figcaption b{font-size:12px}.mq-item::after{opacity:1}}
+@media (prefers-reduced-motion:reduce){.mq{overflow-x:auto}.mq-row{animation:none}}
+/* ---------- Financiamento ---------- */
+.fin{background:var(--mist);padding-block:clamp(72px,8vw,120px)}
+.fin-in{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,110px);align-items:center}
+.fin .slot{aspect-ratio:5/4;--phs:clamp(60px,8vw,130px)}
+.fin p{margin:26px 0 34px}
+
+/* ---------- CTA final ---------- */
+.cta{position:relative;background:var(--ink);color:#fff;padding-block:clamp(80px,9vw,140px);overflow:hidden;text-align:left}
+.cta h2{font-size:clamp(32px,4vw,62px);max-width:16ch;line-height:1.02}
+.cta .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:44px}
+.cta .streak{position:absolute;right:-10%;top:18%;width:70%;height:34%;background:linear-gradient(100deg,rgba(0,87,239,0),rgba(0,87,239,.28) 60%,rgba(0,87,239,0));transform:skewX(-24deg);filter:blur(40px);pointer-events:none}
+
+.contact-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;margin-top:clamp(48px,6vw,80px);border-top:1px solid rgba(255,255,255,.12);padding-top:28px}
+.ci{display:flex;align-items:center;gap:14px;padding:6px 18px 6px 0;color:#fff;font-weight:600;font-size:15px;transition:color .3s}
+.ci svg{width:22px;height:22px;flex:none;color:#7FA8FF;transition:transform .4s var(--ease)}
+.ci small{display:block;font-size:12px;font-weight:500;color:rgba(255,255,255,.5);margin-bottom:2px}
+a.ci:hover{color:#9DB8FF}
+a.ci:hover svg{transform:translateY(-2px)}
+.mm-contact{display:flex;gap:18px;margin-top:22px;font-size:14px;color:rgba(255,255,255,.7);opacity:0;transition:opacity .6s .5s}
+.menu-open .mm-contact{opacity:1}
+.mm-contact a{display:inline-flex;align-items:center;gap:8px}
+.mm-contact svg{width:18px;height:18px;color:#7FA8FF}
+/* ---------- Rodapé ---------- */
+.ft{background:var(--ink);color:rgba(255,255,255,.66);border-top:1px solid rgba(255,255,255,.08);padding-block:64px 36px;font-size:15px}
+.ft-in{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
+.ft img{height:60px;width:auto;margin-bottom:22px}
+.ft h4{margin:0 0 16px;font-size:13px;font-weight:600;color:#fff}
+.ft ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ft a:hover{color:#fff}
+.ft-legal{border-top:1px solid rgba(255,255,255,.08);margin-top:52px;padding-top:24px;font-size:12px;line-height:1.6;color:rgba(255,255,255,.42)}
+
+
+/* ---------- Detalhe do modelo + giro ---------- */
+.md{position:fixed;inset:0;z-index:70;background:#fff;color:var(--ink);display:grid;grid-template-columns:1.55fr 1fr;opacity:0;pointer-events:none;transition:opacity .45s var(--ease);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.md.open{opacity:1;pointer-events:auto}
+.md-close{position:absolute;z-index:3;top:calc(18px + env(safe-area-inset-top,0px));right:22px;width:52px;height:52px;border-radius:50%;background:var(--mist);display:grid;place-items:center;transition:background .3s,transform .4s var(--ease)}
+.md-close:hover{background:var(--ink);color:#fff;transform:rotate(90deg)}
+.md-close svg{width:20px;height:20px}
+.md-stage{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;background:radial-gradient(70% 60% at 50% 55%,#fff 0%,#F4F5F7 70%,#ECEEF1 100%);overflow:hidden;touch-action:pan-y;cursor:grab;user-select:none;-webkit-user-select:none}
+.md-stage.drag{cursor:grabbing}
+.md-view{position:relative;width:min(88%,980px);aspect-ratio:16/10;perspective:1400px}
+.md-plat{position:absolute;left:4%;right:4%;bottom:6%;height:24%;border-radius:50%;border:2px solid rgba(11,13,18,.16);background:radial-gradient(closest-side,rgba(11,13,18,.12),rgba(11,13,18,0) 80%);transform-origin:center}
+.md-bike{position:absolute;inset:4% 6% 14%;display:grid;place-items:center;transform-style:preserve-3d;will-change:transform}
+.md-bike img{max-width:100%;max-height:100%;object-fit:contain;pointer-events:none;-webkit-user-drag:none;filter:drop-shadow(0 24px 22px rgba(11,13,18,.22))}
+.md-pill{position:relative;z-index:2;margin-top:-6px;display:inline-flex;align-items:center;gap:12px;min-height:44px;padding:0 20px;border-radius:999px;background:var(--ink);color:#fff;font-weight:700;font-size:17px;font-stretch:110%}
+.md-pill svg{width:18px;height:18px}
+.md-hint{margin:12px 0 0;font-size:14px;color:var(--mute)}
+.md-info{display:flex;flex-direction:column;justify-content:center;padding:90px clamp(28px,4vw,64px) 48px;border-left:1px solid var(--line);overflow:auto}
+.md-info small{font-size:14px;font-weight:600;color:var(--blue)}
+.md-info h2{margin:8px 0 0;font-size:clamp(30px,3vw,46px);font-weight:800;font-stretch:112%;line-height:1;letter-spacing:-.01em}
+.md-info p.t{font-size:16px;color:var(--mute);margin:22px 0 28px;max-width:34ch}
+.md-info .show-price{margin-bottom:22px}
+.md-info .btn{align-self:flex-start}
+.md-info .btn+.btn{margin-top:10px}
+.md-in>*{opacity:0;transform:translateY(24px);transition:opacity .7s var(--ease),transform .8s var(--ease)}
+.md.open .md-in>*{opacity:1;transform:none}
+.md.open .md-in>*:nth-child(2){transition-delay:.06s}.md.open .md-in>*:nth-child(3){transition-delay:.12s}.md.open .md-in>*:nth-child(4){transition-delay:.18s}.md.open .md-in>*:nth-child(5){transition-delay:.24s}.md.open .md-in>*:nth-child(6){transition-delay:.3s}
+.md-share{display:inline-flex;align-items:center;gap:10px;margin-top:18px;font-size:14px;font-weight:600;color:var(--mute);align-self:flex-start;transition:color .3s}
+.md-share:hover{color:var(--blue)}
+.md-share svg{width:18px;height:18px}
+.toast{position:fixed;z-index:90;left:50%;bottom:calc(90px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:12px 20px;border-radius:999px;font-size:14px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .3s,transform .4s var(--ease)}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.fly{position:fixed;z-index:80;pointer-events:none;object-fit:contain;transition:transform .75s var(--ease-io)}
+.tile .slot{cursor:zoom-in}
+@media (max-width:900px){
+  .md{grid-template-columns:1fr;grid-template-rows:auto 1fr;overflow:auto}
+  .md-stage{min-height:56svh;padding:70px 0 26px}
+  .md-view{width:100%}
+  .md-info{border-left:0;padding:28px var(--pad) 40px;justify-content:flex-start}
+  .md-info .btn{align-self:stretch}
+}
+
+/* barra fixa no celular */
+.mbar{position:fixed;z-index:40;left:0;right:0;bottom:0;padding:10px 14px calc(10px + env(safe-area-inset-bottom,0px));background:var(--ink);display:none;gap:8px;transform:translateY(110%);transition:transform .6s var(--ease)}
+.mbar.show{transform:none}
+.mbar .btn{flex:1;min-height:48px;padding:0 14px}
+
+/* ---------- Responsivo ---------- */
+@media (max-width:1080px){
+  .nav,.hd-wa{display:none}
+  .burger{display:block}
+  .show-grid{grid-template-columns:1fr}
+  .show-copy{order:2}
+  .show-media{order:1}
+  .cons-top,.cons-grid,.cons-grid2,.fin-in{grid-template-columns:1fr}
+  .perks{grid-template-columns:1fr 1fr}
+  .sim{position:relative;top:0}
+  .ft-in{grid-template-columns:1fr 1fr}
+  .ft-in>div:first-child{grid-column:1/-1}
+}
+@media (max-width:720px){
+  body{font-size:16px}
+  .hd-in{height:64px}
+  .hd-logo img{height:38px}
+  .hero{min-height:560px}
+  .slide .ph .mark{left:50%;top:30%;width:86%}
+  .slide .slot.cutout img.photo{right:auto;left:50%;transform:translateX(-50%);bottom:auto;top:13%;width:100%;height:36%;object-position:center}
+  .slide .slot.cutout::before{right:0;left:0;top:10%;bottom:auto;width:auto;height:42%}
+  .editbar{top:auto;bottom:calc(84px + env(safe-area-inset-bottom,0px));font-size:12px}
+  .slide::after{background:linear-gradient(0deg,rgba(11,13,18,.94) 12%,rgba(11,13,18,.4) 48%,rgba(11,13,18,.1) 70%)}
+  .slide-copy{bottom:110px}
+  .slide-copy .ctas .btn{flex:1;padding:0 14px;font-size:14px}
+  .slide .slot.full img.photo{object-position:var(--posM,50% 50%)}
+  .slide.is-full::after{background:linear-gradient(0deg,rgba(11,13,18,.95) 10%,rgba(11,13,18,.5) 46%,rgba(11,13,18,.15) 70%,rgba(11,13,18,.45) 100%)}
+  .hero-side{display:none}
+  .slide.right .slide-copy{align-items:flex-start;text-align:left;padding-right:var(--pad)}
+  .slide.right .slide-copy h2{font-size:clamp(34px,9vw,44px);max-width:13ch}
+  .slide.right .slide-copy .ctas{justify-content:flex-start}
+  .slide.right.is-full::after{background:linear-gradient(0deg,rgba(11,13,18,.95) 10%,rgba(11,13,18,.5) 46%,rgba(11,13,18,.15) 70%,rgba(11,13,18,.45) 100%)}
+  .hero-ui{bottom:26px}
+  .dot{font-size:0;padding-top:0;height:14px}
+  .hero-arrows{display:none}
+  .show-head .lead{display:none}
+  .show-num{font-size:52px}
+  .show-cat{margin-top:18px}
+  .show-nav .circ{display:none}
+  .tile{flex-basis:76vw}
+  .navbtn{display:none!important}
+  .cat-head .tabs{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:calc(100% + 2*var(--pad));margin-inline:calc(-1*var(--pad));padding-inline:var(--pad)}
+  .cat-head .tabs::-webkit-scrollbar{display:none}
+  .cat-head .tabs button{flex:none}
+  .cat-foot{display:none}
+  .mbar{display:flex}
+  .ft-in{grid-template-columns:1fr}
+  .perks{grid-template-columns:1fr}
+  .perks li{padding:15px 0}
+  .tbl-scroll{max-height:420px}
+  .tbl th,.tbl td{padding-inline:14px}
+  .tbl td{font-size:14px}
+  .contact-row{grid-template-columns:1fr;gap:18px}
+  .ft{padding-bottom:110px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important;transition-delay:0s!important}
+  [data-r]{opacity:1!important;transform:none!important;clip-path:none!important}
+}
+</style>
+</head>
+<body>
+<script src="/anselmo-intro.js"></script>
+
+<header class="hd" id="hd">
+  <div class="wrap hd-in">
+    <a class="hd-logo" href="#inicio" aria-label="Anselmo Motos, início"><img src="/images/marca/logo-anselmo-motos.webp" alt="Anselmo Motos" width="440" height="176"></a>
+    <nav class="nav" aria-label="Principal">
+      <button type="button" id="megaBtn" aria-expanded="false" aria-controls="mega">Motos</button>
+      <a href="#seminovas" data-soon>Seminovas</a>
+      <a href="#consorcio">Consórcio</a>
+      <a href="#financiamento">Financiamento</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#clientes" data-needs="clientes">Clientes</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-blue hd-wa" data-wa="consultor" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>WhatsApp</a>
+    <button class="burger" type="button" id="burger" aria-label="Abrir menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
+  <div class="mega" id="mega" aria-hidden="true">
+    <div class="wrap mega-in" id="megaIn"></div>
+  </div>
+</header>
+
+<div class="mm" id="mm" aria-hidden="true">
+  <nav aria-label="Menu">
+    <a href="#motos">Motos</a>
+    <a href="#consorcio">Consórcio</a>
+    <a href="#financiamento">Financiamento</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <a class="btn btn-blue" data-wa="consultor" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>Falar com consultor</a>
+  <div class="mm-contact"><a href="tel:+5599982609990"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg>Ligar</a><a href="https://instagram.com/anselmomotosoficial" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@anselmomotosoficial</a></div>
+</div>
+
+<main id="inicio">
+  <!-- 02 HERO -->
+  <section class="hero hero-in-wait" id="hero" aria-roledescription="carrossel" aria-label="Destaques">
+    <div class="hero-stage" id="heroStage"></div>
+    <button type="button" class="hero-side l" id="hL" aria-label="Destaque anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button type="button" class="hero-side r" id="hR" aria-label="Próximo destaque"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></button>
+    <div class="hero-ui wrap">
+      <div class="dots" id="dots" role="tablist"></div>
+      <button type="button" class="hero-pause" id="hPause" aria-label="Pausar"><svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg></button>
+      <div class="hero-arrows">
+        <button type="button" id="hPrev" aria-label="Destaque anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button type="button" id="hNext" aria-label="Próximo destaque"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 VITRINE EDITORIAL -->
+  <section class="show" id="motos" aria-label="Motos em destaque">
+    <div class="wrap">
+      <div class="show-head">
+        <h2 class="h-sec" data-r="up">Em destaque</h2>
+        <p class="lead d1" data-r="up">Modelos Honda com atendimento direto da equipe Anselmo.</p>
+      </div>
+      <div class="show-grid">
+        <div class="show-copy">
+          <div class="show-num" aria-hidden="true"><span id="sNum">01</span></div>
+          <p class="show-cat roll"><span id="sCat"></span></p>
+          <h3 class="show-name roll"><span id="sName"></span></h3>
+          <p class="show-line roll"><span id="sLine"></span></p>
+          <div class="show-price roll"><span id="sPrice"></span></div>
+          <div class="swatches" id="sColors" role="group" aria-label="Cores"></div>
+          <a class="btn btn-ink" id="sCta" href="#">Tenho interesse <span class="arrow"></span></a>
+        </div>
+        <div class="show-media" id="sMedia"></div>
+      </div>
+      <div class="show-nav">
+        <div class="show-list" id="sList"></div>
+        <button class="circ" type="button" id="sPrev" aria-label="Modelo anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="circ" type="button" id="sNext" aria-label="Próximo modelo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 CATÁLOGO -->
+  <section class="cat" id="catalogo" aria-label="Catálogo de motos">
+    <div class="wrap cat-head">
+      <h2 class="h-sec" data-r="up">Todos os modelos</h2>
+      <div class="tabs" id="tabs" role="group" aria-label="Filtrar por categoria"></div>
+    </div>
+    <div class="track" id="track"></div>
+    <div class="wrap cat-foot" hidden>
+      <button class="circ" type="button" id="cPrev" aria-label="Voltar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="circ" type="button" id="cNext" aria-label="Avançar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </section>
+
+  <!-- 06 SEMINOVAS: aparece sozinha quando houver motos cadastradas em DATA.seminovas -->
+  <section class="cat" id="seminovas" aria-label="Seminovas" hidden>
+    <div class="wrap cat-head"><h2 class="h-sec">Seminovas</h2></div>
+    <div class="track" id="trackUsed"></div>
+  </section>
+
+  <!-- 05 EXPERIÊNCIA -->
+  <section class="exp" id="sobre" aria-label="Sobre a Anselmo Motos">
+    <div class="bg" id="expBg"></div>
+    <div class="wrap exp-copy">
+      <p class="k" data-r="up">Bacabal, Maranhão</p>
+      <h2 class="h-display d1" data-r="up">Mais do que uma loja. Uma experiência sobre duas rodas.</h2>
+      <p class="d2" data-r="up">Confiança no atendimento, variedade para escolher e um caminho claro para sair de moto: financiamento, consórcio e o cuidado depois da compra.</p>
+    </div>
+  </section>
+
+  <!-- 07 CONSÓRCIO CANOPUS -->
+  <section class="cons" id="consorcio" aria-label="Consórcio Canopus">
+    <div class="wrap">
+      <div class="cons-top">
+        <div>
+          <p class="cons-brand" data-r="up">Consórcio Canopus</p>
+          <h2 class="h-sec" data-r="up">Seu próximo veículo pode começar aqui.</h2>
+        </div>
+        <p class="lead" data-r="up">Carro ou moto, com um consultor da Anselmo acompanhando cada etapa. Escolha o crédito e veja a parcela na hora.</p>
+      </div>
+
+      <ul class="perks" id="perks" aria-label="Vantagens do consórcio"></ul>
+
+      <div class="cons-grid2">
+        <div class="sim2" id="simulador" data-r="up">
+          <h3>Simule sua parcela</h3>
+          <div class="seg2" role="group" aria-label="O que você procura">
+            <button type="button" data-tipo="Moto" aria-pressed="true">Moto</button>
+            <button type="button" data-tipo="Carro" aria-pressed="false">Carro</button>
+          </div>
+          <div class="credit">
+            <small>Valor do crédito</small>
+            <div class="credit-row">
+              <button type="button" class="stepb" id="cMinus" aria-label="Diminuir crédito">&minus;</button>
+              <output id="val">R$ 100.000</output>
+              <button type="button" class="stepb" id="cPlus" aria-label="Aumentar crédito">+</button>
+            </div>
+            <input type="range" id="rng" min="0" step="1" value="0" aria-label="Valor da carta de crédito">
+            <div class="rng"><span id="rMin"></span><span id="rMax"></span></div>
+          </div>
+          <div class="plans" role="radiogroup" aria-label="Plano">
+            <button type="button" class="plan" data-plano="100" role="radio" aria-checked="true"><span>Plano 100%</span><b id="p100">R$ 0</b><em>por mês</em></button>
+            <button type="button" class="plan" data-plano="70" role="radio" aria-checked="false"><span>Plano 70%</span><b id="p70">R$ 0</b><em>por mês</em></button>
+          </div>
+          <div class="field"><input id="nome" type="text" autocomplete="given-name" placeholder="Seu nome (opcional)" aria-label="Seu nome"></div>
+          <a class="btn btn-blue" id="simCta" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>Receber esta simulação no WhatsApp</a>
+          <p class="fine">Valores de referência informados pela Anselmo Motos. Parcela, prazo, taxas e regras dependem do grupo e das condições vigentes na contratação. Não há garantia de contemplação em prazo determinado.</p>
+        </div>
+
+        <div class="tbl" data-r="up">
+          <div class="tbl-head"><h3>Tabela de parcelas</h3><p>Toque numa linha para simular</p></div>
+          <div class="tbl-scroll" id="tblScroll">
+            <table>
+              <thead><tr><th scope="col">Crédito</th><th scope="col" data-col="100">Plano 100%</th><th scope="col" data-col="70">Plano 70%</th></tr></thead>
+              <tbody id="tblBody"></tbody>
+            </table>
+          </div>
+          <p class="tbl-note">A tabela mostra cartas de R$ 100 mil a R$ 480 mil. Para créditos a partir de R$ 12 mil ou acima de R$ 480 mil, fale com um consultor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 FINANCIAMENTO -->
+  <section class="fin" id="financiamento" aria-label="Financiamento">
+    <div class="wrap fin-in">
+      <div class="slot light full has-photo" data-r="wipe" data-slot="financiamento/destaque.webp" data-ph="Anselmo"><div class="zoom"><img class="photo" id="finImg" alt="Honda Africa Twin na estrada" loading="lazy"></div></div>
+      <div>
+        <h2 class="h-sec" data-r="up">Financiamento</h2>
+        <p class="lead" data-r="up">Condições para quem quer sair de moto agora. O consultor monta a proposta com você pelo WhatsApp.</p>
+        <div id="banks"></div>
+        <a class="btn btn-ink" data-wa="financiamento" href="#" data-r="up">Simular financiamento <span class="arrow"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPE -->
+  <section class="team" id="equipe" aria-label="Nossa equipe">
+    <div class="wrap team-head">
+      <div>
+        <p class="cons-brand" data-r="up">Nossa equipe</p>
+        <h2 class="h-sec" data-r="up">Fale direto com quem vai te atender</h2>
+      </div>
+      <div class="tabs" id="teamTabs" role="group" aria-label="Filtrar equipe"></div>
+    </div>
+    <div class="team-track" id="teamTrack"></div>
+  </section>
+
+  <!-- PERGUNTAS FREQUENTES -->
+  <section class="faq" id="duvidas" aria-label="Perguntas frequentes">
+    <div class="wrap faq-in">
+      <div class="faq-side">
+        <p class="cons-brand" data-r="up">Dúvidas</p>
+        <h2 class="h-sec" data-r="up">Perguntas frequentes</h2>
+        <p class="lead" data-r="up">Não achou sua dúvida? Pergunte direto para a equipe.</p>
+        <a class="btn btn-ink" data-wa="consultor" href="#" data-r="up"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>Perguntar no WhatsApp</a>
+      </div>
+      <div class="faq-list"><details class="qa" data-r="up"><summary><span>Como funciona o consórcio?</span><i aria-hidden="true"></i></summary><div class="qa-a"><p>Você escolhe o valor da carta de crédito e entra num grupo que paga parcelas mensais. Nas assembleias, participantes são contemplados por sorteio ou por lance, conforme as regras do grupo. Contemplado, você usa o crédito para comprar o carro ou a moto.</p></div></details><details class="qa" data-r="up"><summary><span>O que é a carta de crédito?</span><i aria-hidden="true"></i></summary><div class="qa-a"><p>É o valor que você terá para a compra quando for contemplado. No simulador do site, você escolhe esse valor e vê a parcela na hora.</p></div></details><details class="qa" data-r="up"><summary><span>Qual a diferença entre o Plano 70% e o Plano 100%?</span><i aria-hidden="true"></i></summary><div class="qa-a"><p>Para a mesma carta, o Plano 70% tem parcela menor que o Plano 100%. As regras de cada plano, como até quando vale a parcela reduzida, estão no contrato, e o consultor explica tudo antes de você fechar.</p></div></details><details class="qa" data-r="up"><summary><span>Posso dar meu carro ou moto usado como lance?</span><i aria-hidden="true"></i></summary><div class="qa-a"><p>Sim. Seu usado pode entrar como lance. E se preferir lance em dinheiro, ele pode ser parcelado em 4x no boleto ou em 18x nos cartões.</p></div></details><details class="qa" data-r="up"><summary><span>Dá para ser contemplado logo?</span><i aria-hidden="true"></i></summary><div class="qa-a"><p>Sim. Existe consórcio com contemplação na 1ª parcela e também cartas já contempladas, prontas para transferir. As duas opções dependem da disponibilidade, então confirme com um consultor.</p></div></details><details class="qa" data-r="up"><summary><span>Como falo com um consultor?</span><i aria-hidden="true"></i></summary><div class="qa-a"><p>Pelo WhatsApp (99) 98260-9990, ou direto com alguém da nossa equipe, logo acima nesta página. O atendimento continua por lá, com a sua simulação já escrita na mensagem.</p></div></details></div>
+    </div>
+  </section>
+
+  <!-- MURAL DE CLIENTES: aparece quando houver fotos em DATA.clientes -->
+  <section class="mural" id="clientes" aria-label="Mural de clientes" hidden>
+    <div class="wrap mural-head">
+      <div>
+        <p class="cons-brand" data-r="up">Mural de clientes</p>
+        <h2 class="h-sec" data-r="up">Quem já saiu de moto nova com a gente</h2>
+      </div>
+      <a class="ig-link" href="https://instagram.com/anselmomotosoficial" target="_blank" rel="noopener" data-r="up"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>Veja mais em<b>@anselmomotosoficial</b></span></a>
+    </div>
+    <div class="mq" id="mq"><div class="mq-row" id="mq1"></div><div class="mq-row rev" id="mq2"></div></div>
+  </section>
+  <div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Foto do cliente" aria-hidden="true">
+    <button type="button" class="lb-x" id="lbX" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <button type="button" class="lb-n l" id="lbP" aria-label="Foto anterior"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <figure><img id="lbImg" alt=""><figcaption id="lbCap"></figcaption></figure>
+    <button type="button" class="lb-n r" id="lbN" aria-label="Próxima foto"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+
+  <!-- 09 CTA -->
+  <section class="cta" id="contato" aria-label="Fale com a Anselmo Motos">
+    <div class="streak" aria-hidden="true"></div>
+    <div class="wrap">
+      <h2 class="h-display" data-r="up">Pronto para sair de moto nova?</h2>
+      <div class="ctas" data-r="up">
+        <a class="btn btn-blue" data-wa="consultor" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>Falar com consultor</a>
+        <a class="btn btn-line" href="#motos">Ver motos</a>
+      </div>
+      <div class="contact-row" data-r="up">
+        <a class="ci" data-wa="consultor" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg><span><small>WhatsApp</small>(99) 98260-9990</span></a>
+        <a class="ci" href="tel:+5599982609990"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></svg><span><small>Telefone</small>(99) 98260-9990</span></a>
+        <a class="ci" href="https://instagram.com/anselmomotosoficial" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span><small>Instagram</small>@anselmomotosoficial</span></a>
+        <div class="ci"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg><span><small>Loja</small>Bacabal, Maranhão</span></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="ft">
+  <div class="wrap">
+    <div class="ft-in">
+      <div>
+        <img src="/images/marca/logo-anselmo-motos.webp" alt="Anselmo Motos" width="440" height="176" loading="lazy">
+        <p style="margin:0;max-width:36ch">Motos Honda, Consórcio Canopus e financiamento em Bacabal-MA.</p>
+        <button type="button" class="test" id="testBtn" hidden>Testar fotos neste aparelho</button>
+      </div>
+      <div><h4>Navegue</h4><ul><li><a href="#motos">Motos</a></li><li><a href="#consorcio">Consórcio</a></li><li><a href="#financiamento">Financiamento</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#equipe">Equipe</a></li><li><a href="#duvidas">Perguntas frequentes</a></li></ul></div>
+      <div><h4>Contato</h4><ul><li><a data-wa="consultor" href="#">WhatsApp (99) 98260-9990</a></li><li><a href="tel:+5599982609990">Telefone (99) 98260-9990</a></li><li><a href="https://instagram.com/anselmomotosoficial" target="_blank" rel="noopener">Instagram @anselmomotosoficial</a></li><li>Bacabal-MA</li></ul></div>
+    </div>
+    <div class="ft-legal">Simulações com valores de referência informados pela Anselmo Motos. Lance, carta contemplada e transferência dependem da disponibilidade. Honda e Canopus são marcas de seus respectivos titulares. © 2026 Anselmo Motos</div>
+  </div>
+</footer>
+
+<div class="editbar" role="status"><span>Toque em "Trocar foto" em cada espaço</span><button type="button" id="editClear">Limpar</button><button type="button" class="ok" id="editOk">Concluir</button></div>
+<div class="md" id="md" role="dialog" aria-modal="true" aria-labelledby="mdName" aria-hidden="true">
+  <button type="button" class="md-close" id="mdClose" aria-label="Fechar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+  <div class="md-stage" id="mdStage">
+    <div class="md-view"><div class="md-plat" id="mdPlat"></div><div class="md-bike" id="mdBike"><img id="mdImg" alt=""></div></div>
+    <div class="md-pill" id="mdPill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg><span id="mdPillTxt">360°</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+    <p class="md-hint">Clique e arraste</p>
+  </div>
+  <div class="md-info"><div class="md-in" style="display:flex;flex-direction:column">
+    <small id="mdCat"></small>
+    <h2 id="mdName"></h2>
+    <p class="t" id="mdTxt"></p>
+    <div class="show-price" id="mdPrice"></div>
+    <div class="swatches" id="mdColors" role="group" aria-label="Cores"></div>
+    <div style="display:flex;flex-direction:column"><a class="btn btn-blue" id="mdCta" target="_blank" rel="noopener" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>Quero essa moto</a><a class="btn btn-line" href="#simulador" id="mdSim">Ver parcela no consórcio</a><button type="button" class="md-share" id="mdShare"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="M8.2 10.8l7.6-4.4M8.2 13.2l7.6 4.4"/></svg><span>Compartilhar esta moto</span></button></div>
+  </div></div>
+</div>
+<div class="mbar" id="mbar">
+  <a class="btn btn-blue" data-wa="consultor" href="#"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>WhatsApp</a>
+  <a class="btn btn-line" style="color:#fff" href="#simulador">Ver parcela</a>
+</div>
+
+<script>
+/* =================== DADOS (edite aqui) ===================
+   Fotos: coloque o caminho em "img" (ex.: "//images/motos/cg160/principal.webp").
+   Enquanto "img" estiver vazio, o espaço mostra o nome do modelo no lugar da foto.
+   Preço: deixe null até a loja confirmar o valor. */
+var FOTO_TWISTER="/images/motos/cb300f-twister.webp";
+var FOTO_NC750X="/images/motos/nc750x.webp";
+var FOTO_BIZ_KUROMI="/images/motos/biz-kuromi.webp";
+var FOTO_POP="/images/motos/pop110i.webp";
+var FOTO_CG_VERMELHA="/images/motos/cg160-titan-vermelho.webp";
+var FOTO_CG_CINZA="/images/motos/cg160-titan-cinza.webp";
+var FOTO_NX500="/images/motos/nx500.webp";
+var FOTO_TRANSALP="/images/motos/xl750-transalp.webp";
+var FOTO_CRF="/images/motos/linha-crf.webp";
+var FOTO_TRX="/images/motos/trx420fm.webp";
+var FOTO_BROS="/images/motos/nxr160-bros.webp";
+var FOTO_SAHARA="/images/motos/sahara-300.webp";
+var FOTO_HORNET="/images/motos/cb500-hornet.webp";
+var FOTO_BIZ125="/images/motos/biz125.webp";
+var FOTO_CINE1="/images/hero/01-piloto-tunel.webp";
+var FOTO_CINE2="/images/hero/02-farol-bros.webp";
+var FOTO_CINE3="/images/hero/03-hornet-cidade.webp";
+var FOTO_AFRICA="/images/secoes/financiamento-africa-twin.webp";
+var FOTO_CRF_ACAO="/images/secoes/sobre-crf-trilha.webp";
+var FOTO_CINE4="/images/hero/04-quadriciclo-campo.webp";
+var FOTO_EQ_BEATRIZ="/images/equipe/beatriz-moreira.webp";
+var FOTO_EQ_FRANCISCO="/images/equipe/francisco-paulo.webp";
+var FOTO_EQ_MATHEUS="/images/equipe/matheus-henrique.webp";
+var FOTO_EQ_GABRIELA="/images/equipe/gabriela-torres.webp";
+var FOTO_EQ_CARLA="/images/equipe/carla-learia.webp";
+var DATA = {
+  siteUrl: "https://www.anselmomotos.com.br",  /* endereço usado nos links compartilhados de cada moto */
+  whatsapp: "5599982609990",
+  mensagens: {
+    consultor: "Olá! Vim pelo site da Anselmo Motos e quero falar com um especialista sobre consórcio de carro ou moto.",
+    financiamento: "Olá! Vim pelo site da Anselmo Motos e quero simular o financiamento de uma moto.",
+    modelo: "Olá! Vim pelo site da Anselmo Motos e tenho interesse na {modelo}."
+  },
+  motos: [
+    { id:"cb300f-twister", nome:"CB300F Twister", categoria:"Naked", texto:"Naked para o dia a dia, com postura esportiva e presença de moto maior.", preco:null, img:FOTO_TWISTER, destaque:true },
+    { id:"nc750x",        nome:"NC750X",        categoria:"Crossover", texto:"Para quem quer ir mais longe com conforto, na cidade e na estrada.", preco:null, img:FOTO_NC750X, destaque:false },
+    { id:"biz-kuromi",    nome:"Biz Kuromi",    categoria:"Cub", texto:"A edição especial da Biz, com o visual da personagem Kuromi.", preco:null, img:FOTO_BIZ_KUROMI, destaque:false },
+    { id:"cg160",        nome:"CG 160 Titan", categoria:"Street", texto:"Para quem usa a moto todo dia, no trabalho e na cidade.", preco:null, img:FOTO_CG_VERMELHA, destaque:true,
+      cores:[{nome:"Vermelho", hex:"#C8161D", img:FOTO_CG_VERMELHA},{nome:"Cinza", hex:"#A3A8AE", img:FOTO_CG_CINZA}] },
+    { id:"nx500",         nome:"NX500",         categoria:"Crossover", texto:"Crossover para rodar no asfalto e encarar estrada de chão.", preco:null, img:FOTO_NX500, destaque:false },
+    { id:"crf",           nome:"Linha CRF",     categoria:"Off Road", texto:"Feita para a terra: trilha, motocross e competição.", preco:null, img:FOTO_CRF, destaque:false },
+    { id:"trx420",        nome:"TRX 420FM 4x4", categoria:"Quadriciclo", texto:"Tração 4x4 para o trabalho no campo e o lazer em terreno difícil.", preco:null, img:FOTO_TRX, destaque:false },
+    { id:"xl750-transalp",nome:"XL750 Transalp",categoria:"Big Trail", texto:"Para longas viagens, no asfalto ou fora dele.", preco:null, img:FOTO_TRANSALP, destaque:false },
+    { id:"nxr160-bros",  nome:"NXR 160 Bros", categoria:"Trail",  texto:"Para quem alterna asfalto e estrada de terra.",           preco:null, img:FOTO_BROS, destaque:true },
+    { id:"sahara-300",   nome:"Sahara 300",   categoria:"Trail",  texto:"Para viagens e caminhos mais longos.",                    preco:null, img:FOTO_SAHARA, destaque:true },
+    { id:"cb500-hornet", nome:"CB500 Hornet", categoria:"Naked",  texto:"Para quem quer subir de categoria.",                      preco:null, img:FOTO_HORNET, destaque:false },
+    { id:"biz125",       nome:"Biz 125",      categoria:"Cub",    texto:"Prática para deslocamentos curtos e rotina urbana.",      preco:null, img:FOTO_BIZ125, destaque:true },
+    { id:"pop110i",      nome:"Pop 110i",     categoria:"Entrada",texto:"Uma porta de entrada para quem vai ter a primeira moto.", preco:null, img:FOTO_POP, destaque:false }
+  ],
+  seminovas: [],   /* { nome, ano, km, preco, img } — a seção aparece quando houver itens */
+  bancos: [],
+  clientes: [],
+  equipe: [{nome:"Beatriz Moreira",cargo:"Consultora de Consórcio",area:"Consórcio",tel:"99991153485",ig:"beatriz_consorcios",img:FOTO_EQ_BEATRIZ},{nome:"Francisco Paulo",cargo:"Consultor de Vendas",area:"Vendas",tel:"99981091500",ig:"neto.paulo12",img:FOTO_EQ_FRANCISCO},{nome:"Matheus Henrique",cargo:"Consultor de Vendas",area:"Vendas",tel:"99981208578",ig:"matheusmahesofi",img:FOTO_EQ_MATHEUS},{nome:"Gabriela Torres",cargo:"Consultora de Vendas",area:"Vendas",tel:"99981778547",ig:"gabriittorres",img:FOTO_EQ_GABRIELA},{nome:"Carla Learia",cargo:"Consultora de Consórcio",area:"Consórcio",tel:"99981795912",ig:"carlalearia_consorcio",img:FOTO_EQ_CARLA}],   /* { nome, cargo, area, tel (só números com DDD), ig, img } */   /* { img, nome, moto } — nome e moto são opcionais; o mural aparece quando houver fotos */      /* { nome, logo } — só logos reais enviados pela loja */
+  hero: [
+    { tag:"Anselmo Motos",      linhas:["Sua próxima moto","começa aqui."], cta:["Conhecer motos","#motos"], cta2:"consultor", slot:"hero/principal.webp", ph:"Honda", nome:"Motos", img:FOTO_CINE1, full:true, pos:"64% 55%", posM:"70% 50%" },
+    { tag:"Consórcio Canopus",  linhas:["Crédito de R$ 12 mil","a R$ 1 milhão."], cta:["Ver minha parcela","#simulador"], cta2:"consultor", slot:"hero/consorcio.webp", ph:"NXR 160 Bros", nome:"Consórcio", img:FOTO_CINE2, full:true, pos:"72% 50%", posM:"58% 40%" },
+    { tag:"Condição da loja",   linhas:["Seu usado","vale como lance."], cta:["Falar com consultor","wa"], slot:"hero/usado-como-lance.webp", ph:"CB500 Hornet", nome:"Seu usado", img:FOTO_CINE3, full:true, right:true, pos:"0% 50%", posM:"40% 50%" },
+    { tag:"Quadriciclo TRX 420FM 4x4", linhas:["Força para o","trabalho e lazer."], cta:["Conhecer o TRX","model:trx420"], cta2:"consultor", slot:"hero/quadriciclo.webp", ph:"TRX 420FM", nome:"Quadriciclo", img:FOTO_CINE4, full:true, right:true, pos:"50% 60%", posM:"45% 50%" }
+  ],
+  condicoes: ["Seu usado como lance","Lance parcelado em 4x no boleto","Lance parcelado em 18x nos cartões","Consórcio com contemplação na 1ª parcela","Consórcio já contemplado, no ponto de transferir","Crédito de 12 mil a 1 milhão"],
+  tabela: [[1e5,1198.31,915.12],[11e4,1318.14,1006.73],[12e4,1434.97,1098.25],[13e4,1557.8,1189.77],[14e4,1503.57,1229.02],[15e4,1610.96,1316.81],[16e4,1718.36,1404.6],[17e4,1825.76,1492.38],[18e4,1933.16,1580.17],[19e4,2040.55,1667.96],[2e5,2147.95,1755.74],[21e4,2255.35,1443.53],[22e4,2362.75,1931.32],[23e4,2470.14,2019.11],[24e4,2577.54,2106.89],[25e4,2684.94,2194.68],[26e4,2792.34,2282.47],[27e4,2899.74,2370.25],[28e4,3007.13,2458.04],[3e5,3013,2642.82],[32e4,3212.8,2819.02],[34e4,3413.6,2995.2],[36e4,3614.4,3171.38],[38e4,3815.2,3347.57],[4e5,4016,3523.76],[42e4,4216.8,3699.95],[44e4,4417.6,3876.14],[46e4,4618.4,4052.32],[48e4,4819.2,4228.51]]
+};
+</script>
+<script>
+(function(){
+"use strict";
+var $=function(s,r){return (r||document).querySelector(s)}, $$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+var reduce=matchMedia("(prefers-reduced-motion: reduce)").matches;
+var brl=new Intl.NumberFormat("pt-BR",{style:"currency",currency:"BRL"});
+var brl0=new Intl.NumberFormat("pt-BR",{style:"currency",currency:"BRL",maximumFractionDigits:0});
+function wa(msg){return "https://wa.me/"+DATA.whatsapp+"?text="+encodeURIComponent(msg)}
+function waModelo(n){return wa(DATA.mensagens.modelo.replace("{modelo}",n))}
+var ARW='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+var MARK="/images/marca/simbolo.webp";
+function phHTML(){return '<div class="ph" aria-hidden="true"><i class="beam"></i><i class="floor"></i><img class="mark" src="'+MARK+'" alt=""><i class="trail"></i><i class="trail t2"></i></div><button type="button" class="edit-chip">Trocar foto</button>'}
+function slot(cls,path,ph,img){
+  return '<div class="slot '+cls+(img?(/\bfull\b/.test(cls)?' has-photo':' has-photo cutout'):'')+'" data-slot="'+path+'" data-alt="'+ph+'"><div class="zoom">'+(img?'<img class="photo" src="'+img+'" alt="'+ph+'" loading="lazy">':'')+phHTML()+'</div></div>';
+}
+$$('[data-wa]').forEach(function(a){a.href=wa(DATA.mensagens[a.dataset.wa]);a.target="_blank";a.rel="noopener"});
+$$('.slot[data-slot]').forEach(function(el){ if(!el.innerHTML.trim()) el.innerHTML='<div class="zoom">'+phHTML()+'</div>'; });
+
+/* ---------- Header ---------- */
+var hd=$("#hd"), lastY=0;
+function onScrollHeader(){
+  var y=scrollY;
+  hd.classList.toggle("solid", y>40 || document.body.classList.contains("menu-open") || megaOpen);
+  hd.classList.toggle("hide", y>innerHeight*1.2 && y>lastY+4 && !megaOpen);
+  if(y<lastY-4) hd.classList.remove("hide");
+  lastY=y;
+  $("#mbar").classList.toggle("show", y>innerHeight*.8);
+}
+/* mega menu */
+var megaOpen=false, mega=$("#mega"), megaBtn=$("#megaBtn");
+var cats={}; DATA.motos.forEach(function(m){(cats[m.categoria]=cats[m.categoria]||[]).push(m)});
+var mh=""; Object.keys(cats).forEach(function(c){
+  mh+='<div><h4>'+c+'</h4><ul>'+cats[c].map(function(m,i){return '<li><a href="#catalogo" data-go="'+m.id+'" style="transition-delay:'+(i*.05+.1)+'s">'+(m.img?'<img src="'+m.img+'" alt="" loading="lazy">':'')+'<span>'+m.nome+'</span></a></li>'}).join("")+'</ul></div>';
+});
+$("#megaIn").innerHTML=mh;
+function setMega(v){megaOpen=v;mega.classList.toggle("open",v);megaBtn.setAttribute("aria-expanded",v);mega.setAttribute("aria-hidden",!v);onScrollHeader()}
+megaBtn.addEventListener("click",function(){setMega(!megaOpen)});
+mega.addEventListener("click",function(e){if(e.target.closest("a"))setMega(false)});
+document.addEventListener("click",function(e){if(megaOpen&&!e.target.closest("#hd"))setMega(false)});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){setMega(false);setMenu(false)}});
+/* menu mobile */
+var burger=$("#burger");
+function setMenu(v){document.body.classList.toggle("menu-open",v);burger.setAttribute("aria-expanded",v);burger.setAttribute("aria-label",v?"Fechar menu":"Abrir menu");$("#mm").setAttribute("aria-hidden",!v);document.documentElement.style.overflow=v?"hidden":"";
+  $$("#mm nav a").forEach(function(a,i){a.style.transitionDelay=v?(.25+i*.06)+"s":"0s"});onScrollHeader()}
+burger.addEventListener("click",function(){setMenu(!document.body.classList.contains("menu-open"))});
+$$("#mm a").forEach(function(a){a.addEventListener("click",function(){setMenu(false)})});
+
+/* ---------- Hero ---------- */
+var stage=$("#heroStage"), dots=$("#dots"), hero=$("#hero"), DUR=6000;
+DATA.hero.forEach(function(h,i){
+  var s=document.createElement("div"); s.className="slide"+(i===0?" on":""); s.setAttribute("aria-hidden",i!==0);
+  var cta1= /^model:/.test(h.cta[1]) ? '<a class="btn btn-blue" href="#catalogo" data-open-model="'+h.cta[1].slice(6)+'">'+h.cta[0]+'</a>' : h.cta[1]==="wa" ? '<a class="btn btn-blue" href="'+wa(DATA.mensagens.consultor)+'" target="_blank" rel="noopener">'+h.cta[0]+'</a>' : '<a class="btn btn-blue" href="'+h.cta[1]+'">'+h.cta[0]+'</a>';
+  var cta2= h.cta2 ? '<a class="btn btn-line" href="'+wa(DATA.mensagens[h.cta2])+'" target="_blank" rel="noopener">Falar com consultor</a>' : '';
+  var Tag=i===0?"h1":"h2";
+  s.innerHTML='<div class="media">'+slot("dark"+(h.full?" full":""),h.slot,h.ph,h.img)+'</div><div class="slide-copy wrap"><p class="k">'+h.tag+'</p><'+Tag+' class="h-display">'+h.linhas.map(function(l){return '<span class="line"><span>'+l+'</span></span>'}).join("")+'</'+Tag+'><div class="ctas">'+cta1+cta2+'</div></div>';
+  if(h.right)s.classList.add("right");
+  if(h.full){s.classList.add("is-full");s.style.setProperty("--pos",h.pos||"50% 50%");s.style.setProperty("--posM",h.posM||h.pos||"50% 50%")}
+  stage.appendChild(s);
+  var tr=s.querySelector(".trail"); if(tr){tr.style.setProperty("--ty",[62,56,68][i%3]+"%");tr.style.setProperty("--tr",[-5,-9,-3][i%3]+"deg")}
+  var d=document.createElement("button"); d.type="button"; d.className="dot"+(i===0?" on":""); d.setAttribute("role","tab"); d.innerHTML='<i></i>'+h.nome; d.style.setProperty("--dur",DUR+"ms");
+  d.addEventListener("click",function(){go(i)}); dots.appendChild(d);
+});
+var slides=$$(".slide",stage), dotEls=$$(".dot",dots), cur=0, timer=null, busy=false;
+function go(n){
+  n=(n+slides.length)%slides.length; if(n===cur||busy)return; busy=true;
+  var a=slides[cur], b=slides[n];
+  a.classList.remove("on"); a.classList.add("leaving"); a.setAttribute("aria-hidden","true");
+  b.classList.add("entering"); b.setAttribute("aria-hidden","false");
+  void b.offsetWidth; b.classList.add("on");
+  dotEls[cur].classList.remove("on"); dotEls[n].classList.add("on"); cur=n;
+  setTimeout(function(){a.classList.remove("leaving");b.classList.remove("entering");busy=false},reduce?20:1150);
+  arm();
+}
+function arm(){clearTimeout(timer); if(!hero.classList.contains("paused") && !hero.classList.contains("stopped") && !document.body.classList.contains("editing")) timer=setTimeout(function(){go(cur+1)},DUR)}
+$("#hNext").addEventListener("click",function(){go(cur+1)});
+$("#hR").addEventListener("click",function(){go(cur+1)}); $("#hL").addEventListener("click",function(){go(cur-1)});
+$("#hPause").addEventListener("click",function(){var st=hero.classList.toggle("stopped");this.setAttribute("aria-label",st?"Continuar":"Pausar");
+  this.innerHTML=st?'<svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 5l12 7-12 7z"/></svg>':'<svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14"/><rect x="14" y="5" width="4" height="14"/></svg>';
+  if(st)clearTimeout(timer);else arm()}); $("#hPrev").addEventListener("click",function(){go(cur-1)});
+
+
+var tx=null; hero.addEventListener("touchstart",function(e){tx=e.touches[0].clientX},{passive:true});
+hero.addEventListener("touchend",function(e){if(tx===null)return;var dx=e.changedTouches[0].clientX-tx;if(Math.abs(dx)>45)go(cur+(dx<0?1:-1));tx=null},{passive:true});
+
+/* entrada do hero depois da abertura da logo */
+function heroGo(){ if(!hero.classList.contains("hero-in-wait"))return; hero.classList.add("hero-go"); requestAnimationFrame(function(){hero.classList.remove("hero-in-wait")}); slides[0].classList.remove("on"); void slides[0].offsetWidth; slides[0].classList.add("on"); dotEls[0].classList.remove("on"); void dotEls[0].offsetWidth; dotEls[0].classList.add("on"); arm(); }
+if(document.documentElement.classList.contains("am-intro-on")){
+  new MutationObserver(function(ms,o){ if(!document.documentElement.classList.contains("am-intro-on")){o.disconnect();setTimeout(heroGo,120)} }).observe(document.documentElement,{attributes:true,attributeFilter:["class"]});
+} else setTimeout(heroGo,60);
+
+/* ---------- Vitrine editorial ---------- */
+/* modelos com foto aparecem primeiro */
+DATA.motos.sort(function(a,b){return (b.img?1:0)-(a.img?1:0)});
+var ORDEM=["cg160","nxr160-bros","cb300f-twister","biz125","sahara-300"];
+var feat=DATA.motos.filter(function(m){return m.destaque}).sort(function(a,b){return ORDEM.indexOf(a.id)-ORDEM.indexOf(b.id)}), si=0, sBusy=false;
+var sMedia=$("#sMedia"), sList=$("#sList");
+feat.forEach(function(m,i){ var b=document.createElement("button"); b.type="button"; b.textContent=m.nome; b.setAttribute("aria-current",i===0); b.addEventListener("click",function(){showGo(i)}); sList.appendChild(b) });
+function fillShow(i){
+  var m=feat[i];
+  $("#sNum").textContent=String(i+1).padStart(2,"0");
+  $("#sCat").textContent=m.categoria; $("#sName").textContent=m.nome; $("#sLine").textContent=m.texto;
+  $("#sPrice").innerHTML= m.preco ? 'A partir de<b>'+brl0.format(m.preco)+'</b>' : 'Preço e condições<b>Consulte o consultor</b>';
+  $("#sCta").href=waModelo(m.nome); $("#sCta").target="_blank";
+  renderSw($("#sColors"),m,function(c){var im=sMedia.lastChild.querySelector("img.photo");swapImg(im,c.img)});
+  $$("button",sList).forEach(function(b,j){b.setAttribute("aria-current",j===i)});
+}
+function mediaEl(m){var d=document.createElement("div"); d.innerHTML=slot("light contain","motos/"+m.id+"/principal.webp",m.nome,m.img); return d.firstChild}
+sMedia.appendChild(mediaEl(feat[0])); fillShow(0);
+var rolls=["#sCat","#sName","#sLine","#sPrice"];
+function showGo(n){
+  n=(n+feat.length)%feat.length; if(n===si||sBusy)return; sBusy=true;
+  var dir=n>si||(si===feat.length-1&&n===0)?1:-1; if(si===0&&n===feat.length-1)dir=-1;
+  var old=sMedia.lastChild, nu=mediaEl(feat[n]);
+  nu.classList.add("pre"); if(dir<0) nu.style.transform="translateX(-14%) scale(.88)";
+  sMedia.appendChild(nu); applyPhotos(nu.parentNode);
+  old.classList.add("out"); if(dir<0) old.style.transform="translateX(14%) scale(.9)";
+  var num=$("#sNum"); num.style.transform="translateY("+(-100*dir)+"%)";
+  rolls.forEach(function(s,k){var e=$(s); e.style.transitionDelay=(k*.05)+"s"; e.style.transform="translateY("+(-105*dir)+"%)"; e.style.opacity="0"});
+  setTimeout(function(){
+    fillShow(n); si=n;
+    num.style.transition="none"; num.style.transform="translateY("+(100*dir)+"%)"; void num.offsetWidth; num.style.transition=""; num.style.transform="";
+    rolls.forEach(function(s,k){var e=$(s); e.style.transition="none"; e.style.transform="translateY("+(105*dir)+"%)"; void e.offsetWidth; e.style.transition=""; e.style.transitionDelay=(.05+k*.06)+"s"; e.style.transform=""; e.style.opacity=""});
+    nu.style.transform=""; nu.classList.remove("pre");
+  }, reduce?0:420);
+  setTimeout(function(){ old.remove(); sBusy=false }, reduce?30:1100);
+}
+$("#sNext").addEventListener("click",function(){showGo(si+1)}); $("#sPrev").addEventListener("click",function(){showGo(si-1)});
+var sx=null; sMedia.addEventListener("touchstart",function(e){sx=e.touches[0].clientX},{passive:true});
+sMedia.addEventListener("touchend",function(e){if(sx===null)return;var dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>40)showGo(si+(dx<0?1:-1));sx=null},{passive:true});
+
+function swapImg(im,src){if(!im||im.src===src)return;im.style.opacity=0;setTimeout(function(){im.src=src;im.onload=function(){im.style.opacity=1};if(im.complete)im.style.opacity=1},reduce?0:300)}
+function renderSw(box,m,onPick){
+  if(!m.cores){box.innerHTML="";box.hidden=true;return}
+  box.hidden=false;
+  box.innerHTML='<span>'+m.cores[0].nome+'</span>'+m.cores.map(function(c,i){return '<button type="button" class="sw" style="--c:'+c.hex+'" aria-label="'+c.nome+'" aria-pressed="'+(i===0)+'"></button>'}).join("");
+  $$(".sw",box).forEach(function(b,i){b.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();$$(".sw",box).forEach(function(x){x.setAttribute("aria-pressed",x===b)});box.firstChild.textContent=m.cores[i].nome;onPick(m.cores[i])})});
+}
+/* ---------- Catálogo ---------- */
+var track=$("#track"), tabs=$("#tabs");
+DATA.motos.forEach(function(m){
+  var a=document.createElement("a"); a.className="tile"; a.dataset.cat=m.categoria; a.id="m-"+m.id; a.href=waModelo(m.nome); a.target="_blank"; a.rel="noopener";
+  a.innerHTML=slot("light contain","motos/"+m.id+"/principal.webp",m.nome,m.img)+'<div class="tile-body"><h3>'+m.nome+'</h3><p class="price">'+(m.preco?'A partir de '+brl0.format(m.preco):m.categoria)+'</p><div class="swatches"></div><span class="more">Ver de perto <span class="arrow"></span></span></div>';
+  if(m.cores)a.classList.add("has-sw");
+  track.appendChild(a);
+  renderSw(a.querySelector(".swatches"),m,function(c){swapImg(a.querySelector("img.photo"),c.img)});
+});
+["Todas"].concat(Object.keys(cats)).forEach(function(c,i){
+  var b=document.createElement("button"); b.type="button"; b.textContent=c; b.setAttribute("aria-pressed",i===0);
+  b.addEventListener("click",function(){
+    $$("button",tabs).forEach(function(x){x.setAttribute("aria-pressed",x===b)});
+    $$(".tile",track).forEach(function(t,k){var show=c==="Todas"||t.dataset.cat===c; t.classList.toggle("hidden",!show); if(show&&!reduce){t.style.opacity=0;t.style.transform="translateY(24px)";setTimeout(function(){t.style.opacity="";t.style.transform=""},30+k*50)}});
+    track.scrollTo({left:0,behavior:reduce?"auto":"smooth"}); setTimeout(function(){window.__updNav&&window.__updNav()},450);
+  });
+  tabs.appendChild(b);
+});
+(function(){var w=document.createElement("div");w.className="trackwrap";track.parentNode.insertBefore(w,track);w.appendChild(track);
+  var chev=function(d){return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="'+(d>0?'M9 5l7 7-7 7':'M15 5l-7 7 7 7')+'"/></svg>'};
+  var pv=document.createElement("button");pv.type="button";pv.className="navbtn prev";pv.setAttribute("aria-label","Modelos anteriores");pv.innerHTML=chev(-1);
+  var nx=document.createElement("button");nx.type="button";nx.className="navbtn next";nx.setAttribute("aria-label","Próximos modelos");nx.innerHTML=chev(1);
+  w.appendChild(pv);w.appendChild(nx);pv.addEventListener("click",function(){step(-1)});nx.addEventListener("click",function(){step(1)});
+  function upd(){pv.hidden=track.scrollLeft<10;nx.hidden=track.scrollLeft+track.clientWidth>=track.scrollWidth-10}
+  track.addEventListener("scroll",upd,{passive:true});addEventListener("resize",upd);setTimeout(upd,300);window.__updNav=upd;
+})();
+function step(d){var t=track.querySelector(".tile:not(.hidden)"); track.scrollBy({left:d*(t?t.offsetWidth+20:400),behavior:reduce?"auto":"smooth"})}
+$("#cNext").addEventListener("click",function(){step(1)}); $("#cPrev").addEventListener("click",function(){step(-1)});
+document.addEventListener("click",function(e){var g=e.target.closest("[data-go]"); if(!g)return; e.preventDefault(); var t=$("#m-"+g.dataset.go); $("#catalogo").scrollIntoView({behavior:reduce?"auto":"smooth"}); setTimeout(function(){track.scrollTo({left:t.offsetLeft-track.offsetLeft-parseInt(getComputedStyle(track).paddingLeft),behavior:"smooth"})},reduce?0:600)});
+
+
+/* ---------- Detalhe do modelo com giro ----------
+   Giro 360° real: preencha "frames" do modelo (ou de cada cor) com as fotos em sequência,
+   ex.: frames:["//images/motos/cb500-hornet/360/01.webp", ... "16.webp"].
+   Sem frames, a moto gira em perspectiva (inclinação) a partir da foto principal. */
+var md=$("#md"), mdStage=$("#mdStage"), mdBike=$("#mdBike"), mdImg=$("#mdImg"), mdPlat=$("#mdPlat"), cur3=null, lastFocus=null;
+var R={frames:[],ang:0,vel:0,drag:false,x0:0,a0:0,raf:0,lt:0};
+function setFrames(list){R.frames=list||[];R.frames.forEach(function(s){var i=new Image();i.src=s});$("#mdPillTxt").textContent=R.frames.length>1?"360°":"Girar";R.ang=0;render3()}
+function render3(){
+  if(R.frames.length>1){var n=R.frames.length,k=((Math.round(R.ang/(360/n))%n)+n)%n;if(mdImg.dataset.k!=k){mdImg.src=R.frames[k];mdImg.dataset.k=k}mdBike.style.transform="";mdPlat.style.transform="rotate("+(R.ang*.02)+"deg)"}
+  else{var a=Math.max(-32,Math.min(32,R.ang));mdBike.style.transform="rotateY("+a+"deg) scale("+(1-Math.abs(a)/900)+")";mdPlat.style.transform="translateX("+(a*.35)+"px) scaleX("+(1-Math.abs(a)/220)+")"}
+}
+function loop(t){
+  var dt=Math.min(40,t-(R.lt||t));R.lt=t;
+  if(!R.drag){
+    if(R.frames.length>1){R.ang+=R.vel*dt;R.vel*=Math.pow(.94,dt/16);if(Math.abs(R.vel)<.002)R.vel=0}
+    else{R.vel+=(-R.ang*.0009)*dt;R.vel*=Math.pow(.86,dt/16);R.ang+=R.vel*dt;if(Math.abs(R.ang)<.05&&Math.abs(R.vel)<.002){R.ang=0;R.vel=0}}
+    render3();
+    if(R.vel===0&&(R.frames.length>1||R.ang===0)){R.raf=0;return}
+  }
+  R.raf=requestAnimationFrame(loop);
+}
+function kick(){if(!R.raf){R.lt=0;R.raf=requestAnimationFrame(loop)}}
+mdStage.addEventListener("pointerdown",function(e){if(e.button>0)return;R.drag=true;R.x0=e.clientX;R.a0=R.ang;R.px=e.clientX;R.pt=performance.now();R.vel=0;mdStage.classList.add("drag");mdStage.setPointerCapture(e.pointerId);kick()});
+mdStage.addEventListener("pointermove",function(e){if(!R.drag)return;var w=mdStage.clientWidth,k=R.frames.length>1?360/(w*.9):60/(w*.5);
+  var soft=R.frames.length>1?1:1;R.ang=R.a0+(e.clientX-R.x0)*k*soft;
+  if(R.frames.length<=1&&Math.abs(R.ang)>32)R.ang=Math.sign(R.ang)*(32+(Math.abs(R.ang)-32)*.25);
+  var now=performance.now(),dt=Math.max(1,now-R.pt);R.vel=(e.clientX-R.px)*k/dt;R.px=e.clientX;R.pt=now;render3()});
+function endDrag(){if(!R.drag)return;R.drag=false;mdStage.classList.remove("drag");if(R.frames.length<=1)R.vel=0;kick()}
+mdStage.addEventListener("pointerup",endDrag);mdStage.addEventListener("pointercancel",endDrag);
+document.addEventListener("keydown",function(e){if(!md.classList.contains("open"))return;if(e.key==="ArrowRight"||e.key==="ArrowLeft"){R.vel=0;R.ang+=(e.key==="ArrowRight"?1:-1)*(R.frames.length>1?360/R.frames.length:14);if(R.frames.length<=1)R.ang=Math.max(-32,Math.min(32,R.ang));render3();kick()}});
+
+function openModel(m,srcImg,fromHash){
+  cur3=m; if(!fromHash&&location.hash!=="#moto/"+m.id){try{history.pushState({moto:m.id},"","#moto/"+m.id)}catch(e){}}lastFocus=document.activeElement;
+  $("#mdCat").textContent=m.categoria;$("#mdName").textContent=m.nome;$("#mdTxt").textContent=m.texto;
+  $("#mdPrice").innerHTML=m.preco?'A partir de<b>'+brl0.format(m.preco)+'</b>':'Preço e condições<b>Consulte o consultor</b>';
+  $("#mdCta").href=wa("Olá! Vim pelo site da Anselmo Motos e quero essa moto: "+m.nome+".");
+  var first=(m.cores&&m.cores[0])||m, startSrc=(srcImg&&srcImg.currentSrc)||first.img||m.img;
+  mdImg.src=startSrc;delete mdImg.dataset.k;
+  setFrames(first.frames||m.frames);
+  renderSw($("#mdColors"),m,function(c){swapImg(mdImg,c.img);setFrames(c.frames||m.frames)});
+  if(m.cores&&srcImg){var ci=m.cores.findIndex(function(c){return c.img===srcImg.src});if(ci>0){var b=$$(".sw",$("#mdColors"))[ci];b&&b.click()}}
+  md.setAttribute("aria-hidden","false");document.documentElement.style.overflow="hidden";clearTimeout(timer);
+  md.classList.add("open");
+  /* a moto sai do card e vai para o palco */
+  if(srcImg&&!reduce){
+    var a=srcImg.getBoundingClientRect();mdImg.style.opacity=0;
+    requestAnimationFrame(function(){
+      var b=mdImg.getBoundingClientRect(),f=document.createElement("img");f.src=startSrc;f.className="fly";
+      f.style.left=b.left+"px";f.style.top=b.top+"px";f.style.width=b.width+"px";f.style.height=b.height+"px";
+      var s=Math.min(a.width/b.width,a.height/b.height);
+      f.style.transform="translate("+(a.left+a.width/2-(b.left+b.width/2))+"px,"+(a.top+a.height/2-(b.top+b.height/2))+"px) scale("+s+")";
+      document.body.appendChild(f);void f.offsetWidth;f.style.transform="none";
+      setTimeout(function(){mdImg.style.opacity="";f.remove()},760);
+    });
+  }
+  setTimeout(function(){$("#mdClose").focus()},50);
+}
+function closeModelUI(){md.classList.remove("open");md.setAttribute("aria-hidden","true");document.documentElement.style.overflow="";R.vel=0;R.ang=0;render3();arm();if(lastFocus&&lastFocus.focus)lastFocus.focus()}
+function closeModel(){if(/^#moto\//.test(location.hash)){if(history.state&&history.state.moto){history.back();return}try{history.replaceState(null,"",location.pathname+location.search)}catch(e){}}closeModelUI()}
+function fromHash(){var mm=/^#moto\/(.+)$/.exec(location.hash),m=mm&&DATA.motos.find(function(x){return x.id===mm[1]});
+  if(m){if(!md.classList.contains("open")||cur3!==m)openModel(m,null,true)}else if(md.classList.contains("open"))closeModelUI()}
+addEventListener("popstate",fromHash);addEventListener("hashchange",fromHash);
+if(/^#moto\//.test(location.hash)){document.documentElement.classList.remove("am-intro-on");setTimeout(fromHash,60)}
+function toast(t){var el=$("#toast");if(!el){el=document.createElement("div");el.id="toast";el.className="toast";el.setAttribute("role","status");document.body.appendChild(el)}el.textContent=t;el.classList.add("show");clearTimeout(el._t);el._t=setTimeout(function(){el.classList.remove("show")},2400)}
+$("#mdShare").addEventListener("click",function(){if(!cur3)return;var url=DATA.siteUrl.replace(/\/$/,"")+"/#moto/"+cur3.id,title=cur3.nome+" | Anselmo Motos";
+  if(navigator.share){navigator.share({title:title,text:cur3.nome+" na Anselmo Motos",url:url}).catch(function(){})}
+  else if(navigator.clipboard){navigator.clipboard.writeText(url).then(function(){toast("Link da "+cur3.nome+" copiado")},function(){prompt("Copie o link:",url)})}
+  else prompt("Copie o link:",url)});
+$("#mdClose").addEventListener("click",closeModel);
+$("#mdSim").addEventListener("click",function(){closeModel()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"&&md.classList.contains("open"))closeModel()});
+/* clique no card abre o detalhe (o WhatsApp fica no botão de dentro) */
+$$(".tile",track).forEach(function(t){t.addEventListener("click",function(e){if(e.target.closest(".sw"))return;e.preventDefault();var m=DATA.motos.find(function(x){return "m-"+x.id===t.id});if(m)openModel(m,t.querySelector("img.photo"))})});
+sMedia.addEventListener("click",function(){openModel(feat[si],sMedia.lastChild.querySelector("img.photo"))});
+sMedia.style.cursor="zoom-in";
+
+document.addEventListener("click",function(e){var a=e.target.closest("[data-open-model]");if(!a)return;e.preventDefault();var m=DATA.motos.find(function(x){return x.id===a.dataset.openModel});if(m)openModel(m,null)});
+
+/* ---------- Mural de clientes ---------- */
+(function(){
+  var C=DATA.clientes; if(!C.length){$$('[data-needs="clientes"]').forEach(function(x){x.remove()});return;}
+  $("#clientes").hidden=false;
+  function item(c,i){return '<button type="button" class="mq-item" data-i="'+i+'"><img src="'+c.img+'" alt="'+(c.nome?'Cliente '+c.nome:'Cliente Anselmo Motos')+(c.moto?' com a '+c.moto:'')+'" loading="lazy">'+((c.nome||c.moto)?'<figcaption>'+(c.nome?'<b>'+c.nome+'</b>':'')+(c.moto||'')+'</figcaption>':'')+'</button>'}
+  var half=Math.ceil(C.length/2), A=C.map(function(c,i){return [c,i]}), r1=A.slice(0,half), r2=A.slice(half); if(!r2.length)r2=r1.slice().reverse();
+  function fill(el,arr){var s=arr.map(function(x){return item(x[0],x[1])}).join("");while(s.split("mq-item").length-1<12&&arr.length)s+=arr.map(function(x){return item(x[0],x[1])}).join("");el.innerHTML=s+s;el.style.setProperty("--mqd",(Math.max(30,(s.split("mq-item").length-1)*5))+"s")}
+  fill($("#mq1"),r1); fill($("#mq2"),r2);
+  var lb=$("#lb"),li=0;
+  function show(i){li=(i+C.length)%C.length;var c=C[li];$("#lbImg").src=c.img;$("#lbImg").alt=c.nome||"Cliente Anselmo Motos";$("#lbCap").innerHTML=(c.nome?'<b>'+c.nome+'</b>':'')+(c.nome&&c.moto?' · ':'')+(c.moto||'')}
+  function open(i){show(i);lb.classList.add("open");lb.setAttribute("aria-hidden","false");document.documentElement.style.overflow="hidden";$("#lbX").focus()}
+  function close(){lb.classList.remove("open");lb.setAttribute("aria-hidden","true");document.documentElement.style.overflow=""}
+  $("#mq").addEventListener("click",function(e){var b=e.target.closest(".mq-item");if(b)open(+b.dataset.i)});
+  $("#lbX").addEventListener("click",close);$("#lbP").addEventListener("click",function(){show(li-1)});$("#lbN").addEventListener("click",function(){show(li+1)});
+  lb.addEventListener("click",function(e){if(e.target===lb)close()});
+  document.addEventListener("keydown",function(e){if(!lb.classList.contains("open"))return;if(e.key==="Escape")close();if(e.key==="ArrowRight")show(li+1);if(e.key==="ArrowLeft")show(li-1)});
+  var tx=null;lb.addEventListener("touchstart",function(e){tx=e.touches[0].clientX},{passive:true});lb.addEventListener("touchend",function(e){if(tx===null)return;var d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>45)show(li+(d<0?1:-1));tx=null},{passive:true});
+})();
+$("#finImg").src=FOTO_AFRICA;
+/* Seminovas e bancos: só aparecem com dados reais */
+if(DATA.seminovas.length){ var su=$("#seminovas"); su.hidden=false; DATA.seminovas.forEach(function(m){var a=document.createElement("a");a.className="tile";a.href=waModelo(m.nome+(m.ano?" "+m.ano:""));a.target="_blank";a.innerHTML=slot("light contain","seminovas/"+m.nome.toLowerCase().replace(/\W+/g,"-")+".webp",m.nome,m.img)+'<div class="tile-body"><div><small>'+[m.ano,m.km?m.km.toLocaleString("pt-BR")+" km":""].filter(Boolean).join(" · ")+'</small><h3>'+m.nome+'</h3>'+(m.preco?'<p style="opacity:1;transform:none">'+brl0.format(m.preco)+'</p>':'')+'</div><span class="go">'+ARW+'</span></div>';$("#trackUsed").appendChild(a)}) }
+else { $$('a[href="#seminovas"]').forEach(function(a){a.remove()}) }
+if(DATA.bancos.length){ $("#banks").innerHTML='<div style="display:flex;flex-wrap:wrap;gap:28px;align-items:center;margin:0 0 34px">'+DATA.bancos.map(function(b){return '<img src="'+b.logo+'" alt="'+b.nome+'" style="height:28px;width:auto">'}).join("")+'</div>' }
+
+/* ---------- Consórcio ---------- */
+var CHK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>';
+$("#perks").innerHTML=DATA.condicoes.map(function(c,i){return '<li class="'+(i===DATA.condicoes.length-1?'hl':'')+'" data-r="up" style="transition-delay:'+(i*.05)+'s"><i>'+CHK+'</i>'+c+'</li>'}).join("");
+var T=DATA.tabela, rng=$("#rng"), plano="100", tipo="Moto", tb=$("#tblBody");
+rng.max=T.length-1; $("#rMin").textContent=brl0.format(T[0][0]); $("#rMax").textContent=brl0.format(T[T.length-1][0]);
+var mil=function(v){return "R$ "+(v/1000).toLocaleString("pt-BR")+" mil"};
+tb.innerHTML=T.map(function(r,i){return '<tr data-i="'+i+'" tabindex="0"><td>'+mil(r[0])+'</td><td data-c="100">'+brl.format(r[1])+'</td><td data-c="70">'+brl.format(r[2])+'</td></tr>'}).join("");
+function calc(fromTable){
+  var i=+rng.value, r=T[i], p=plano==="100"?r[1]:r[2];
+  $("#val").textContent=brl0.format(r[0]); $("#p100").textContent=brl.format(r[1]); $("#p70").textContent=brl.format(r[2]);
+  rng.style.setProperty("--p",(i/(T.length-1)*100)+"%");
+  $("#cMinus").disabled=i<=0; $("#cPlus").disabled=i>=T.length-1;
+  $$("tr",tb).forEach(function(tr,k){tr.classList.toggle("sel",k===i);$$("td[data-c]",tr).forEach(function(td){td.classList.toggle("on",k===i&&td.dataset.c===plano)})});
+  $$(".tbl th[data-col]").forEach(function(th){th.toggleAttribute("data-on",th.dataset.col===plano)});
+  if(!fromTable){var tr=tb.children[i],sc=$("#tblScroll");if(tr&&(tr.offsetTop<sc.scrollTop+40||tr.offsetTop>sc.scrollTop+sc.clientHeight-50))sc.scrollTo({top:tr.offsetTop-sc.clientHeight/2,behavior:reduce?"auto":"smooth"})}
+  var nome=$("#nome").value.trim();
+  var msg=[nome?"Olá! Meu nome é "+nome+".":"Olá!","Fiz uma simulação no site da Anselmo Motos.","","Tenho interesse em: "+tipo,"Carta de crédito: "+brl0.format(r[0]),"Plano: "+plano+"%","Parcela apresentada: "+brl.format(p),"","Gostaria de saber mais sobre o consórcio."].join("\n");
+  $("#simCta").href=wa(msg); $("#simCta").target="_blank";
+}
+rng.addEventListener("input",function(){calc()}); $("#nome").addEventListener("input",function(){calc(true)});
+$("#cMinus").addEventListener("click",function(){rng.value=Math.max(0,+rng.value-1);calc()});
+$("#cPlus").addEventListener("click",function(){rng.value=Math.min(T.length-1,+rng.value+1);calc()});
+$$(".plan").forEach(function(b){b.addEventListener("click",function(){plano=b.dataset.plano;$$(".plan").forEach(function(x){x.setAttribute("aria-checked",x===b)});calc(true)})});
+$$("[data-tipo]").forEach(function(b){b.addEventListener("click",function(){tipo=b.dataset.tipo;$$("[data-tipo]").forEach(function(x){x.setAttribute("aria-pressed",x===b)});calc(true)})});
+function pickRow(tr,e){rng.value=tr.dataset.i;var td=e&&e.target.closest("td[data-c]");if(td){plano=td.dataset.c;$$(".plan").forEach(function(x){x.setAttribute("aria-checked",x.dataset.plano===plano)})}calc(true);
+  if(innerWidth<1081){$("#simulador").scrollIntoView({behavior:reduce?"auto":"smooth",block:"start"})}}
+tb.addEventListener("click",function(e){var tr=e.target.closest("tr");if(tr)pickRow(tr,e)});
+tb.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){var tr=e.target.closest("tr");if(tr){e.preventDefault();pickRow(tr)}}});
+calc();
+
+/* ---------- Experiência ---------- */
+$("#expBg").innerHTML=slot("dark full","sobre/loja.webp","Honda CRF em ação",FOTO_CRF_ACAO);
+
+
+/* ---------- Testar fotos neste aparelho (IndexedDB, só para quem está vendo) ---------- */
+var PH={}, db=null;
+function idb(){return new Promise(function(res){try{var r=indexedDB.open("anselmo-fotos",1);r.onupgradeneeded=function(){r.result.createObjectStore("f")};r.onsuccess=function(){res(r.result)};r.onerror=function(){res(null)}}catch(e){res(null)}})}
+function idbAll(d){return new Promise(function(res){try{var out={},tx=d.transaction("f"),st=tx.objectStore("f"),c=st.openCursor();c.onsuccess=function(){var k=c.result;if(k){out[k.key]=k.value;k.continue()}else res(out)};c.onerror=function(){res(out)}}catch(e){res({})}})}
+function idbPut(k,v){try{var tx=db.transaction("f","readwrite");v===null?tx.objectStore("f").delete(k):tx.objectStore("f").put(v,k)}catch(e){}}
+function applyPhotos(root){$$(".slot[data-slot]",root||document).forEach(function(s){var src=PH[s.dataset.slot],z=s.querySelector(".zoom")||s,im=z.querySelector("img.photo");
+  if(src){if(!im){im=document.createElement("img");im.className="photo";im.alt=s.dataset.alt||"";z.insertBefore(im,z.firstChild)}im.src=src;s.classList.add("has-photo")}
+  else if(im&&im.dataset.local){im.remove();s.classList.remove("has-photo")}
+  if(im&&src)im.dataset.local="1"})}
+function shrink(file){return new Promise(function(res,rej){var u=URL.createObjectURL(file),i=new Image();i.onload=function(){var M=2400,w=i.naturalWidth,hh=i.naturalHeight,k=Math.min(1,M/Math.max(w,hh)),c=document.createElement("canvas");c.width=Math.round(w*k);c.height=Math.round(hh*k);c.getContext("2d").drawImage(i,0,0,c.width,c.height);URL.revokeObjectURL(u);var d=c.toDataURL("image/webp",.86);if(d.indexOf("image/webp")<0)d=c.toDataURL("image/jpeg",.86);res(d)};i.onerror=rej;i.src=u})}
+var picker=document.createElement("input");picker.type="file";picker.accept="image/*";picker.hidden=true;document.body.appendChild(picker);var target=null;
+document.addEventListener("click",function(e){var c=e.target.closest(".edit-chip");if(!c)return;e.preventDefault();e.stopPropagation();target=c.closest(".slot");picker.value="";picker.click()},true);
+picker.addEventListener("change",function(){var f=picker.files[0];if(!f||!target)return;shrink(f).then(function(d){PH[target.dataset.slot]=d;idbPut(target.dataset.slot,d);applyPhotos()})});
+function setEdit(v){document.body.classList.toggle("editing",v);if(v)clearTimeout(timer);else arm()}
+$("#testBtn").addEventListener("click",function(){setEdit(true);scrollTo({top:0,behavior:reduce?"auto":"smooth"})});
+$("#editOk").addEventListener("click",function(){setEdit(false)});
+$("#editClear").addEventListener("click",function(){if(!confirm("Remover as fotos de teste deste aparelho?"))return;Object.keys(PH).forEach(function(k){idbPut(k,null)});PH={};applyPhotos()});
+if(/[?#&]editar/.test(location.href))setEdit(true);
+idb().then(function(d){db=d;return d?idbAll(d):{}}).then(function(all){PH=all||{};applyPhotos()});
+
+/* ---------- Revelação no scroll ---------- */
+/* elementos com máscara são observados pelo pai, porque a máscara zera a área visível */
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){(e.target.__r||[]).forEach(function(el){el.classList.add("in")});io.unobserve(e.target)}})},{rootMargin:"0px 0px -12% 0px",threshold:.08});
+$$("[data-r]").forEach(function(el){var t=(el.dataset.r==="wipe"||el.dataset.r==="mask")?el.parentElement:el; t.__r=(t.__r||[]).concat(el); io.observe(t)});
+
+
+/* ---------- Equipe ---------- */
+(function(){
+  var E=DATA.equipe||[]; if(!E.length){$("#equipe").hidden=true;return}
+  var WAI='<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>', IGI='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>';
+  var fmt=function(t){return "("+t.slice(0,2)+") "+t.slice(2,7)+"-"+t.slice(7)};
+  $("#teamTrack").innerHTML=E.map(function(m,i){
+    var first=m.nome.split(" ")[0];
+    var link="https://wa.me/55"+m.tel+"?text="+encodeURIComponent("Olá, "+first+"! Vim pelo site da Anselmo Motos e quero atendimento.");
+    return '<article class="mate" data-area="'+m.area+'" data-r="up" style="transition-delay:'+(i*.06)+'s"><div class="mate-ph"><img src="'+m.img+'" alt="'+m.nome+'" loading="lazy"><span class="mate-tag">'+m.area+'</span></div><h3>'+m.nome+'</h3><p>'+m.cargo+'</p><div class="mate-ct"><a class="mate-wa" href="'+link+'" target="_blank" rel="noopener" aria-label="WhatsApp de '+m.nome+'">'+WAI+fmt(m.tel)+'</a>'+(m.ig?'<a class="mate-ig" href="https://instagram.com/'+m.ig+'" target="_blank" rel="noopener" aria-label="Instagram de '+m.nome+': @'+m.ig+'">'+IGI+'</a>':'')+'</div></article>';
+  }).join("");
+  $$("#teamTrack [data-r]").forEach(function(el){io.observe(el);el.__r=[el]});
+  var areas=["Todos"].concat(E.map(function(m){return m.area}).filter(function(a,i,s){return s.indexOf(a)===i}));
+  $("#teamTabs").innerHTML=areas.map(function(a,i){return '<button type="button" aria-pressed="'+(i===0)+'">'+a+'</button>'}).join("");
+  $$("#teamTabs button").forEach(function(b){b.addEventListener("click",function(){$$("#teamTabs button").forEach(function(x){x.setAttribute("aria-pressed",x===b)});var a=b.textContent;$$(".mate").forEach(function(m){m.classList.toggle("off",a!=="Todos"&&m.dataset.area!==a)})})});
+})();
+
+/* ---------- Perguntas: abre uma por vez, com animação ---------- */
+$$(".qa").forEach(function(d){var s=d.querySelector("summary"),a=d.querySelector(".qa-a");
+  s.addEventListener("click",function(e){e.preventDefault();var opening=!d.open;
+    $$(".qa").forEach(function(o){if(o!==d&&o.open){var oa=o.querySelector(".qa-a");oa.style.height=oa.scrollHeight+"px";requestAnimationFrame(function(){oa.style.transition="height .35s ease";oa.style.height="0px"});setTimeout(function(){o.open=false;oa.style.height="";oa.style.transition=""},360)}});
+    if(opening){d.open=true;var hgt=a.scrollHeight;a.style.height="0px";requestAnimationFrame(function(){a.style.transition="height .4s cubic-bezier(.16,1,.3,1)";a.style.height=hgt+"px"});setTimeout(function(){a.style.height="";a.style.transition=""},420)}
+    else{a.style.height=a.scrollHeight+"px";requestAnimationFrame(function(){a.style.transition="height .35s ease";a.style.height="0px"});setTimeout(function(){d.open=false;a.style.height="";a.style.transition=""},360)}
+  })});
+/* ---------- Parallax (hero e experiência) ---------- */
+var expBg=$("#expBg"), exp=$("#sobre"), ticking=false;
+function frame(){
+  ticking=false; onScrollHeader(); if(reduce)return;
+  var y=scrollY, h=innerHeight;
+  if(y<h*1.2){ var p=y/h; stage.style.transform="translateY("+(p*22)+"%) scale("+(1+p*.08)+")"; $$(".slide-copy",stage).forEach(function(c){c.style.opacity=Math.max(0,1-p*1.7);c.style.transform="translateY("+(-p*60)+"px)"}); }
+  var r=exp.getBoundingClientRect(); if(r.bottom>0&&r.top<h){ var q=(r.top+r.height/2-h/2)/h; expBg.style.transform="translateY("+(q*-10)+"%) scale(1.04)"; }
+}
+addEventListener("scroll",function(){if(!ticking){ticking=true;requestAnimationFrame(frame)}},{passive:true});
+addEventListener("resize",frame); frame();
+})();
+</script>
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('a[href*="wa.me"]');
+  if (!a) return;
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ event: 'whatsapp_clique', origem: 'home' });
+  if (window.fbq) window.fbq('track', 'Contact', { origem: 'home' });
+});
+</script></body>
+</html>
