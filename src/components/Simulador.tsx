@@ -26,7 +26,7 @@ export function Simulador() {
   return (
     <section id="simulador" className="scroll-mt-24 bg-papel px-4 py-16 sm:py-24" aria-labelledby="titulo-simulador">
       <div className="mx-auto max-w-5xl">
-        <h2 id="titulo-simulador" className="titulo-secao text-3xl text-navy sm:text-5xl">
+        <h2 id="titulo-simulador" className="max-w-3xl text-4xl font-semibold tracking-[-0.04em] text-[#141414] sm:text-6xl">
           Qual é o valor do carro ou da moto que você procura?
         </h2>
         <p className="mt-3 max-w-xl text-lg text-navy/70">Arraste, escolha o plano e veja a parcela na hora.</p>

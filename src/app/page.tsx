@@ -1,13 +1,13 @@
 import { SITE } from '@/config/site';
 import { FAQ } from '@/data/faq';
 import { Header } from '@/components/Header';
-import { HeroHome } from '@/components/home/HeroHome';
-import { Catalogo } from '@/components/home/Catalogo';
-import { Mosaico } from '@/components/home/Mosaico';
-import { OfertaDestaque } from '@/components/home/OfertaDestaque';
-import { Financeiro } from '@/components/home/Financeiro';
-import { Sobre } from '@/components/home/Sobre';
-import { Servicos } from '@/components/home/Servicos';
+import { IntroLogo } from '@/components/cena/IntroLogo';
+import { HeroCena } from '@/components/cena/HeroCena';
+import { Vitrine } from '@/components/cena/Vitrine';
+import { CatalogoFaixa } from '@/components/cena/CatalogoFaixa';
+import { Financiamento } from '@/components/cena/Financiamento';
+import { Seminovas } from '@/components/cena/Seminovas';
+import { InteresseInicial } from '@/components/cena/InteresseInicial';
 import { Simulador } from '@/components/Simulador';
 import { Consorcio } from '@/components/Consorcio';
 import { Faq } from '@/components/Faq';
@@ -17,7 +17,8 @@ import { LeadForm } from '@/components/LeadForm';
 import { BarraFixa } from '@/components/BarraFixa';
 import { SimuladorProvider } from '@/components/SimuladorProvider';
 
-export default function Home() {
+export default async function Home({ searchParams }: { searchParams: Promise<{ interesse?: string }> }) {
+  const { interesse } = await searchParams;
   const jsonLd = [
     {
       '@context': 'https://schema.org',
@@ -45,17 +46,22 @@ export default function Home() {
   return (
     <SimuladorProvider>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <IntroLogo />
+      <InteresseInicial id={interesse} />
       <Header />
       <main>
-        <HeroHome />
-        <Catalogo />
-        <Mosaico />
-        <OfertaDestaque />
-        <Financeiro />
+        <HeroCena />
+        <Vitrine />
+        <CatalogoFaixa />
         <Consorcio />
         <Simulador />
-        <Sobre />
-        <Servicos />
+        <Financiamento />
+        <Seminovas />
+        <section id="sobre" className="scroll-mt-20 bg-white px-6 py-24 text-[#141414] sm:px-12 lg:px-16">
+          <p className="text-[11px] uppercase tracking-[0.32em] text-[#1565C0]">{SITE.cidade} · {SITE.uf}</p>
+          <h2 className="mt-4 max-w-3xl text-4xl font-semibold leading-[0.95] tracking-[-0.04em] sm:text-6xl">Mais do que uma loja. Uma experiência sobre duas rodas.</h2>
+          <p className="mt-6 max-w-xl text-lg text-[#141414]/70">Atendimento direto, motos para escolher, financiamento, consórcio Canopus e o cuidado depois da compra.</p>
+        </section>
         <Faq />
         <CtaFinal />
       </main>

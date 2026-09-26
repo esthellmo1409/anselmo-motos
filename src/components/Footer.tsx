@@ -17,7 +17,7 @@ export function Footer() {
           <p className="text-xs font-semibold tracking-[0.18em] text-white">NAVEGUE</p>
           <ul className="mt-4 space-y-2 text-sm">
             {NAV.map((item) => (
-              <li key={item.href}><a href={item.href} className="transition hover:text-white">{item.label === 'Sobre nós' ? 'Sobre' : item.label}</a></li>
+              <li key={item.href}><a href={item.href} className="transition hover:text-white">{item.label}</a></li>
             ))}
           </ul>
         </nav>
