@@ -26,10 +26,10 @@ export function Header() {
   const claro = !solido && !aberto;
 
   return (
-    <header className={`fixed inset-x-0 top-0 z-40 transition duration-500 ${solido || aberto ? 'bg-[#f7f5f2]/95 text-[#141414] shadow-[0_1px_0_rgba(0,0,0,.08)] backdrop-blur-md' : 'bg-gradient-to-b from-black/50 to-transparent text-white'}`}>
+    <header className={`fixed inset-x-0 top-0 z-40 transition duration-500 ${solido || aberto ? 'bg-white/95 text-[#141414] shadow-[0_1px_0_rgba(0,0,0,.08)]' : 'bg-transparent text-white'}`}>
       <div className="mx-auto flex h-[4.75rem] max-w-[1500px] items-center justify-between gap-8 px-5 md:px-10">
         <a href="/#inicio" aria-label="Anselmo Motos" onClick={() => setAberto(false)}>
-          <Marca className={`h-11 w-36 sm:h-12 sm:w-44 ${claro ? '' : ''}`} />
+          <Marca sobreFoto={claro} className="h-10 w-32 sm:h-11 sm:w-40" />
         </a>
         <nav className="hidden items-center gap-8 text-[13px] tracking-[0.14em] lg:flex" aria-label="Principal">
           {NAV.map((item) => (
@@ -39,7 +39,7 @@ export function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <BotaoWhats origem="header" className={`hidden px-5 py-3 text-[12px] font-semibold uppercase tracking-[0.16em] transition lg:inline-flex ${claro ? 'bg-white text-[#141414] hover:bg-[#1565C0] hover:text-white' : 'bg-[#1565C0] text-white hover:bg-[#0C447C]'}`}>
+          <BotaoWhats origem="header" className={`hidden text-[12px] font-semibold uppercase tracking-[0.16em] transition lg:inline-flex ${claro ? 'text-white hover:text-[#9ec2ff]' : 'bg-[#1565C0] px-5 py-3 text-white hover:bg-[#0C447C]'}`}>
             WhatsApp
           </BotaoWhats>
           <button type="button" className="grid h-11 w-11 place-items-center lg:hidden" aria-expanded={aberto} aria-label={aberto ? 'Fechar menu' : 'Abrir menu'} onClick={() => setAberto((v) => !v)}>

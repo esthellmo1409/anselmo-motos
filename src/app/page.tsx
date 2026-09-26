@@ -1,9 +1,7 @@
 import { SITE } from '@/config/site';
 import { FAQ } from '@/data/faq';
 import { Header } from '@/components/Header';
-import { IntroLogo } from '@/components/cena/IntroLogo';
 import { HeroCena } from '@/components/cena/HeroCena';
-import { Vitrine } from '@/components/cena/Vitrine';
 import { CatalogoFaixa } from '@/components/cena/CatalogoFaixa';
 import { Financiamento } from '@/components/cena/Financiamento';
 import { Seminovas } from '@/components/cena/Seminovas';
@@ -46,12 +44,10 @@ export default async function Home({ searchParams }: { searchParams: Promise<{ i
   return (
     <SimuladorProvider>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <IntroLogo />
       <InteresseInicial id={interesse} />
       <Header />
       <main>
         <HeroCena />
-        <Vitrine />
         <CatalogoFaixa />
         <Consorcio />
         <Simulador />

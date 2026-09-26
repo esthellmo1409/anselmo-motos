@@ -3,7 +3,13 @@ import { Archivo } from 'next/font/google';
 import { SITE } from '@/config/site';
 import './globals.css';
 
-const archivo = Archivo({ subsets: ['latin'], axes: ['wdth'], variable: '--font-archivo', display: 'swap' });
+const archivo = Archivo({
+  subsets: ['latin'],
+  axes: ['wdth'],
+  style: ['normal', 'italic'],
+  variable: '--font-archivo',
+  display: 'swap',
+});
 
 const titulo = `Consórcio de Carro e Moto em ${SITE.cidade} | ${SITE.nome}`;
 const descricao = `Simule seu consórcio de carro ou moto Canopus na ${SITE.nome}, em ${SITE.cidade}-${SITE.uf}. Escolha a carta de crédito, veja a parcela na hora e fale com um especialista pelo WhatsApp.`;

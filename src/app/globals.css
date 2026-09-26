@@ -53,6 +53,30 @@ body { @apply bg-white text-[#161616] antialiased; }
 .moto-entra { animation: moto-entra .85s cubic-bezier(.16,.84,.22,1) both; }
 .texto-entra { animation: texto-entra .7s cubic-bezier(.16,.84,.22,1) both; }
 
+.titulo-campanha {
+  font-stretch: 145%;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: -0.05em;
+  line-height: .78;
+  text-transform: uppercase;
+}
+@keyframes hero-texto {
+  from { opacity: 0; transform: translate3d(0, 36px, 0); }
+  to { opacity: 1; transform: none; }
+}
+.hero-texto { animation: hero-texto .75s cubic-bezier(.16,.84,.22,1) both; }
+@keyframes hero-foto {
+  from { transform: scale(1.06); }
+  to { transform: scale(1.14); }
+}
+.hero-foto-ativa { animation: hero-foto 7.4s ease-out both; }
+@keyframes hero-progresso {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+.hero-progresso { transform-origin: left; animation: hero-progresso 6.8s linear both; }
+
 .catalogo-faixa { scrollbar-width: none; }
 .catalogo-faixa::-webkit-scrollbar { display: none; }
 
